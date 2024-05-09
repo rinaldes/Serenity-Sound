@@ -21,11 +21,17 @@ export const siteConfig = {
       href: "/services",
     },
   ],
-  links: {
-    email: "mailto:rinaldes.duma@hotmail.com",
-    github: "https://github.com/im-rindu",
-    twitter: "https://x.com/RinaldesD",
-    instagram: "https://www.instagram.com/rinaldes.d",
-    linkedin: "https://www.linkedin.com/in/rinaldes",
-  },
+  socialLinks: [
+    { href: "mailto:rinaldes.duma@hotmail.com", icon: "Email" },
+    { href: "https://www.linkedin.com/in/rinaldes", icon: "Linkedin" },
+    { href: "https://www.instagram.com/rinaldes.d", icon: "Instagram" },
+    { href: "https://x.com/RinaldesD", icon: "Twitter" },
+    { href: "https://github.com/rinaldes", icon: "Github" },
+  ],
+  homeLinks: [
+    { href: "#", icon: "Home" },
+    { href: "#company", icon: "About" },
+    { href: "#product", icon: "Service" },
+    { href: "#review", icon: "Review" },
+  ],
 };

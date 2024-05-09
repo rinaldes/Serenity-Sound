@@ -6,6 +6,15 @@ import {
 } from "@nextui-org/navbar";
 import Link from "next/link";
 import Logo from "@/assets/Logo";
+import { siteConfig } from "@/config/site";
+
+const link = siteConfig.navItems.map(({ href, label }) => (
+  <NavbarItem key={label}>
+    <Link color="foreground" href={href}>
+      {label}
+    </Link>
+  </NavbarItem>
+));
 
 const Nav = () => (
   <Navbar className="px-4 py-4">
@@ -13,26 +22,7 @@ const Nav = () => (
       <Logo />
     </NavbarBrand>
     <NavbarContent className="font-body hidden sm:flex gap-12" justify="center">
-      <NavbarItem>
-        <Link color="foreground" href="#">
-          Home
-        </Link>
-      </NavbarItem>
-      <NavbarItem isActive>
-        <Link color="foreground" href="#">
-          About Us
-        </Link>
-      </NavbarItem>
-      <NavbarItem>
-        <Link color="foreground" href="#">
-          Our Services
-        </Link>
-      </NavbarItem>
-      <NavbarItem>
-        <Link color="foreground" href="#">
-          Our Teams
-        </Link>
-      </NavbarItem>
+      {link}
     </NavbarContent>
   </Navbar>
 );

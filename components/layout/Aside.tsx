@@ -1,19 +1,13 @@
 import { PageIcon } from "@/assets/Icons";
+import { siteConfig } from "@/config/site";
 import Link from "next/link";
 
-const asideLinks: {
-  href: string;
-  icon: "Home" | "About" | "Service" | "Review";
-}[] = [
-  { href: "#", icon: "Home" },
-  { href: "#company", icon: "About" },
-  { href: "#product", icon: "Service" },
-  { href: "#review", icon: "Review" },
-];
-
-const link = asideLinks.map(({ href, icon }) => (
+const link = siteConfig.homeLinks.map(({ href, icon }) => (
   <Link key={icon} href={href}>
-    <PageIcon name={icon} isActive={false} />
+    <PageIcon
+      name={icon as "Home" | "About" | "Service" | "Review"}
+      isActive={false}
+    />
   </Link>
 ));
 
