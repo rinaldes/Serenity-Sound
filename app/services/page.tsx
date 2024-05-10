@@ -1,7 +1,8 @@
-import { Aside, Footer, Navbar } from "components/layout";
-import HomePage from "./home";
+import { Aside, Footer } from "@/components/layout";
+import { Navbar } from "@nextui-org/navbar";
+import { Hero, About, Product, Team, Review } from "@/components/container";
 
-export default function Home() {
+export default function ServicesPage() {
   return (
     <div className="flex h-screen">
       <div className="w-1/12 flex-row">
@@ -15,7 +16,13 @@ export default function Home() {
           >
             <div className="flex flex-col">
               <Navbar />
-              <HomePage />
+              <div className="flex flex-col">
+                <Hero />
+                <About />
+                <Product />
+                <Team />
+                <Review />
+              </div>
             </div>
           </div>
         </main>

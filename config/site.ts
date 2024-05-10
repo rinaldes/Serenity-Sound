@@ -29,7 +29,7 @@ export const siteConfig = {
     { href: "https://github.com/rinaldes", icon: "Github" },
   ],
   homeLinks: [
-    { href: "#", icon: "Home" },
+    { href: "#home", icon: "Home" },
     { href: "#company", icon: "About" },
     { href: "#product", icon: "Service" },
     { href: "#review", icon: "Review" },

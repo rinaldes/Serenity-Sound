@@ -12,7 +12,7 @@ const link = siteConfig.socialLinks.map(({ href, icon }) => (
 ));
 
 const Footer = () => (
-  <footer className="flex flex-row justify-between mt-4 px-4 text-gray-600">
+  <footer className="absolute bottom-0 left-0  w-full flex flex-row justify-between mb-4 pr-16 pl-36 text-gray-600">
     <Text type="p" text="Copyright © 2024. All rights reserved." />
     <div className="flex gap-12">{link}</div>
   </footer>

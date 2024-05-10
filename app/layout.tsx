@@ -1,7 +1,6 @@
 import "styles/globals.css";
-import { Metadata, Viewport } from "next";
+import { Metadata } from "next";
 import { siteConfig } from "config/site";
-import { Providers } from "./providers";
 import { bodyFont } from "@/config/fonts";
 
 export const metadata: Metadata = {
@@ -15,20 +14,11 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
-};
-
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en" suppressHydrationWarning>
     <head />
-    <body className={`${bodyFont.variable}`}>
-      <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
-        {children}
-      </Providers>
+    <body className={`${bodyFont.variable} font-body bg-white-lavender`}>
+      {children}
     </body>
   </html>
 );

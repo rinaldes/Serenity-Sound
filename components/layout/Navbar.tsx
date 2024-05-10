@@ -17,11 +17,11 @@ const link = siteConfig.navItems.map(({ href, label }) => (
 ));
 
 const Nav = () => (
-  <Navbar className="px-4 py-4">
+  <Navbar className="py-4 bg-white-lavender" maxWidth="full">
     <NavbarBrand>
       <Logo />
     </NavbarBrand>
-    <NavbarContent className="font-body hidden sm:flex gap-12" justify="center">
+    <NavbarContent className="font-body hidden sm:flex gap-12" justify="end">
       {link}
     </NavbarContent>
   </Navbar>

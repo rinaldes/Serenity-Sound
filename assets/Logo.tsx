@@ -1,14 +1,26 @@
 import { Image } from "@/components";
-import { bodyFont, titleFont } from "@/config/fonts";
-import SerenityLogo from "@/public/images/serenity-logo-sm.webp";
+import { titleFont } from "@/config/fonts";
+import SerenityLogo from "@/public/logos/serenity-logo-sm.webp";
+import SerenityLogoBig from "@/public/logos/serenity-logo.webp";
 
-const Logo = () => (
-  <div className="flex gap-2 ">
-    <Image src={SerenityLogo} alt="Serenity Logo" />
+interface LogoProps {
+  type?: "small" | "large";
+  variant?: "normal" | "width";
+}
+
+const Logo = ({ type, variant }: LogoProps) => (
+  <div className={`flex ${type === "large" ? "gap-5" : "gap-2"} `}>
+    <Image
+      src={type === "large" ? SerenityLogoBig : SerenityLogo}
+      alt="Serenity Logo"
+      size={type}
+    />
     <span
-      className={`${titleFont.variable} font-title font-semibold text-black text-2xl my-auto`}
+      className={`${titleFont.variable} font-title font-semibold text-black ${
+        type === "large" ? "text-5xl" : "text-2xl"
+      } my-auto`}
     >
-      Serenity
+      Serenity {variant === "width" ? "Company" : ""}
     </span>
   </div>
 );
