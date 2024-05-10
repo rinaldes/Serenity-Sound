@@ -1,6 +1,7 @@
 import { Aside, Footer } from "@/components/layout";
 import { Navbar } from "@nextui-org/navbar";
 import { Hero, About, Product, Team, Review } from "@/components/container";
+import Division from "@/components/container/Division";
 
 export default function TeamsPage() {
   return (
@@ -17,11 +18,10 @@ export default function TeamsPage() {
             <div className="flex flex-col">
               <Navbar />
               <div className="flex flex-col">
-                <Hero />
-                <About />
-                <Product />
                 <Team />
-                <Review />
+                <Division />
+                <Division />
+                <Division />
               </div>
             </div>
           </div>

@@ -12,7 +12,7 @@ import { Heading, Text } from "../typography";
 const About = () => (
   <section
     id="about"
-    className="gap-4 grid grid-cols-6 grid-rows-2 my-8 snap-end"
+    className="gap-4 grid grid-cols-6 grid-rows-2 pt-12 pb-4 snap-end"
   >
     <Card
       image={Studio}

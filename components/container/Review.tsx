@@ -4,7 +4,7 @@ import { Heading, Text } from "../typography";
 const Review = () => (
   <section
     id="review"
-    className="gap-4 grid grid-cols-6 grid-rows-2 my-8 snap-end"
+    className="gap-4 grid grid-cols-6 grid-rows-2 pt-12 pb-4 snap-end"
   >
     <Card
       image={Library1}

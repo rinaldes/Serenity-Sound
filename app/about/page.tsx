@@ -1,6 +1,6 @@
 import { Aside, Footer } from "@/components/layout";
 import { Navbar } from "@nextui-org/navbar";
-import { Hero, About, Product, Team, Review } from "@/components/container";
+import { History, About, Culture, Team } from "@/components/container";
 
 export default function AboutPage() {
   return (
@@ -17,11 +17,10 @@ export default function AboutPage() {
             <div className="flex flex-col">
               <Navbar />
               <div className="flex flex-col">
-                <Hero />
                 <About />
-                <Product />
+                <History />
                 <Team />
-                <Review />
+                <Culture />
               </div>
             </div>
           </div>
