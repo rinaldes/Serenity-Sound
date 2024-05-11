@@ -1,5 +1,6 @@
 interface TextProps {
   text: string;
+  variant?: "italic" | "normal";
   type: "p" | "span";
 }
 {
@@ -8,7 +9,7 @@ interface TextProps {
   Text Component will used for some text styling that used in anywhere
   */
 }
-const Text = ({ type = "p", text }: TextProps) => {
+const Text = ({ type = "p", text, variant = "normal" }: TextProps) => {
   const textMap: Record<TextProps["type"], keyof JSX.IntrinsicElements> = {
     p: "p",
     span: "span",

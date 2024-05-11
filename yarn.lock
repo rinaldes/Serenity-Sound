@@ -327,6 +327,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nextui-org/avatar@npm:^2.0.27":
+  version: 2.0.27
+  resolution: "@nextui-org/avatar@npm:2.0.27"
+  dependencies:
+    "@nextui-org/react-utils": "npm:2.0.13"
+    "@nextui-org/shared-utils": "npm:2.0.5"
+    "@nextui-org/use-image": "npm:2.0.5"
+    "@react-aria/focus": "npm:^3.16.2"
+    "@react-aria/interactions": "npm:^3.21.1"
+    "@react-aria/utils": "npm:^3.23.2"
+  peerDependencies:
+    "@nextui-org/system": ">=2.0.0"
+    "@nextui-org/theme": ">=2.1.0"
+    react: ">=18"
+    react-dom: ">=18"
+  checksum: 10c0/1ff25f82449f5d870988a75aece056538a57f7de21c65f9f19ae21e6ff2746784ac57981b59b1fb3bbff1cf24d5a3e95c77c5946ee3f3fe882673bd74ba305a9
+  languageName: node
+  linkType: hard
+
 "@nextui-org/button@npm:2.0.31, @nextui-org/button@npm:^2.0.31":
   version: 2.0.31
   resolution: "@nextui-org/button@npm:2.0.31"
@@ -3930,6 +3949,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "next-app-template@workspace:."
   dependencies:
+    "@nextui-org/avatar": "npm:^2.0.27"
     "@nextui-org/button": "npm:^2.0.31"
     "@nextui-org/card": "npm:^2.0.28"
     "@nextui-org/code": "npm:^2.0.27"

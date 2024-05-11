@@ -9,9 +9,17 @@ interface CardProps {
   alt: string;
   image: StaticImageData;
   title?: JSX.Element;
+  isBlurred?: boolean;
 }
 
-const CardComponent = ({ size, image, alt, type, title }: CardProps) => {
+const CardComponent = ({
+  size,
+  image,
+  alt,
+  type,
+  title,
+  isBlurred,
+}: CardProps) => {
   let card;
   let cardSize;
 
@@ -32,7 +40,7 @@ const CardComponent = ({ size, image, alt, type, title }: CardProps) => {
   switch (type) {
     case "cover":
       card = (
-        <Card className={cardSize}>
+        <Card className={cardSize} isBlurred={isBlurred}>
           <CardHeader className="absolute z-10 top-12 left-8 w-3/5 flex-col !items-start">
             {/* <Heading type="h3" text="Melt away your worries and soothe your soul" />
         <Heading type="h1" text="Serenity Sound" /> */}
@@ -48,8 +56,8 @@ const CardComponent = ({ size, image, alt, type, title }: CardProps) => {
       break;
     case "text":
       card = (
-        <Card className={cardSize}>
-          <CardHeader className="absolute z-10 w-full h-full flex items-center justify-center">
+        <Card className={`${cardSize}`} isBlurred={isBlurred}>
+          <CardHeader className="absolute z-10 w-full h-full flex items-center justify-center bg-white">
             {title}
           </CardHeader>
         </Card>
@@ -57,7 +65,7 @@ const CardComponent = ({ size, image, alt, type, title }: CardProps) => {
       break;
     case "combination":
       card = (
-        <Card className={cardSize}>
+        <Card className={cardSize} isBlurred={isBlurred}>
           <CardHeader className="absolute z-10 top-12 left-8 w-3/5 flex-col !items-start">
             <Heading type="h1" text="About Our Company" />
           </CardHeader>

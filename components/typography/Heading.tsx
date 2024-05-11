@@ -18,11 +18,17 @@ const Heading = ({ type, text, className }: HeadingProps) => {
       );
     case "h2":
       return (
-        <h2 className={`font-bold font-title text-3xl ${className}`}>{text}</h2>
+        <h2
+          className={`${titleFont.variable} font-bold font-title text-3xl ${className}`}
+        >
+          {text}
+        </h2>
       );
     case "h3":
       return (
-        <h3 className={`font-semibold font-title text-xl ${className}`}>
+        <h3
+          className={`${titleFont.variable} font-semibold font-title text-xl ${className}`}
+        >
           {text}
         </h3>
       );
