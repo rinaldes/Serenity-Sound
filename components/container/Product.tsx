@@ -6,7 +6,7 @@ const Product = () => (
     id="product"
     className="gap-5 grid grid-cols-6 grid-rows-2 pt-12 pb-4 snap-end"
   >
-    <Card image={Library2} alt="Cover Image" size="square" type="cover" />
+    <Card image={Library2} alt="Cover Image" size="square" type="image" />
     <Card
       image={Library2}
       alt="Cover Image"
@@ -24,7 +24,6 @@ const Product = () => (
       }
     />
     <Card
-      image={Library2}
       alt="Cover Image"
       size="square"
       type="text"
@@ -42,14 +41,14 @@ const Product = () => (
         </div>
       }
     />
-    <Card image={TheApp} alt="Cover Image" size="square" type="cover" />
+    <Card image={TheApp} alt="Cover Image" size="square" type="image" />
     <Card
       alt="Cover Image"
       size="square"
       type="text"
       content={
         <div className="text-center">
-          <Heading type="h2" text="Get Your Journey with Serenity Now" />
+          <Heading type="h3" text="Get Your Journey with Serenity Now" />
           <br />
           <Button url="/services#plan" text="Choose Your Plan" />
         </div>

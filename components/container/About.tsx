@@ -15,8 +15,8 @@ const About = () => (
       type="text"
       content={<Logo type="large" variant="width" />}
     />
-    <Card image={Image1} alt="Cover Image" size="square" type="cover" />
-    <Card image={MusicShare} alt="Cover Image" size="square" type="cover" />
+    <Card image={Image1} alt="Cover Image" size="square" type="image" />
+    <Card image={MusicShare} alt="Cover Image" size="square" type="image" />
     <Card
       image={Library1}
       alt="Cover Image"

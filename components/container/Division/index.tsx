@@ -2,12 +2,12 @@ import { Library2 } from "@/assets/Images";
 import { Card } from "@/components";
 import { Heading, Text } from "@/components/typography";
 
-const Division = () => (
+const Division = ({}) => (
   <section
     id="team"
     className="gap-5 grid grid-cols-6 grid-rows-2 pt-12 pb-4 snap-end"
   >
-    <Card image={Library2} alt="Cover Image" size="square" type="cover" />
+    <Card image={Library2} alt="Cover Image" size="square" type="image" />
     <Card
       image={Library2}
       alt="Cover Image"
@@ -24,7 +24,6 @@ const Division = () => (
       }
     />
     <Card
-      image={Library2}
       alt="Cover Image"
       size="square"
       type="text"
@@ -39,7 +38,6 @@ const Division = () => (
       }
     />
     <Card
-      image={Library2}
       alt="Cover Image"
       size="square"
       type="text"
@@ -54,7 +52,6 @@ const Division = () => (
       }
     />
     <Card
-      image={Library2}
       alt="Cover Image"
       size="square"
       type="text"

@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import { Card } from "@/components";
 import { Heading, Text } from "@/components/typography";
 import { Library1 } from "@/assets/Images";
-import { Avatar } from "@nextui-org/avatar";
-import { getReview } from "@/utils";
+import { Avatar, AvatarGroup } from "@nextui-org/avatar";
+import { getReview, getThumbnail } from "@/utils";
 import "./review.css";
 
 const renderUserReviews = (userReview: any) => {
@@ -20,8 +20,7 @@ const renderUserReviews = (userReview: any) => {
           <article className="px-8">
             <Text type="p" variant="italic" text={`‟ ${result.review} ”`} />
             <br />
-            <br />
-            <div className="grid grid-cols-[1fr_5fr]">
+            <div className="grid grid-cols-[1fr_4fr]">
               <Avatar isBordered radius="full" src={result.picture} size="lg" />
               <div>
                 <Heading type="h3" text={result.name} />
@@ -61,13 +60,29 @@ const Review = () => {
         size="width"
         type="text"
         content={
-          <Heading
-            type="h3"
-            text="Hear What Our Users Are Saying About Serenity"
-          />
+          <div>
+            <Heading
+              type="h3"
+              text="Hear What Our Users Are Saying About Serenity"
+            />
+            <br />
+            <AvatarGroup
+              isBordered
+              max={4}
+              renderCount={() => (
+                <p className="text-small text-foreground font-medium ms-2">
+                  + 6.2 Million others
+                </p>
+              )}
+            >
+              {getThumbnail().map((result: any, index: number) => (
+                <Avatar key={index} src={result} size="sm" />
+              ))}
+            </AvatarGroup>
+          </div>
         }
       />
-      <Card image={Library1} alt="Cover Image" size="square" type="cover" />
+      <Card image={Library1} alt="Cover Image" size="square" type="image" />
       <article className="w-[400%] col-span-6 overflow-hidden auto-scroll">
         <div className="w-[100%] grid grid-cols-8 gap-8 pb-4">{userReview}</div>
       </article>

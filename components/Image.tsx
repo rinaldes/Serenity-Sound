@@ -6,8 +6,15 @@ interface ImageProps {
   alt: string;
   className?: string;
   size?: "large" | "small";
+  isZoomable?: boolean;
 }
-const ImageComponent = ({ src, alt, className, size }: ImageProps) => (
+const ImageComponent = ({
+  src,
+  alt,
+  className,
+  size,
+  isZoomable = true,
+}: ImageProps) => (
   <Image
     as={NextImage}
     width={size === "large" ? src.width / 4 : src.width}
@@ -16,7 +23,7 @@ const ImageComponent = ({ src, alt, className, size }: ImageProps) => (
     src={src.src}
     className={className}
     removeWrapper
-    isZoomed
+    isZoomed={isZoomable}
     fallbackSrc={`https://via.placeholder.com/${src.width}x${src.height}`}
   />
 );

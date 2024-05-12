@@ -24,7 +24,6 @@ const Culture = () => (
       }
     />
     <Card
-      image={Library1}
       alt="Cover Image"
       size="square"
       type="text"
@@ -40,7 +39,6 @@ const Culture = () => (
       }
     />
     <Card
-      image={Library1}
       alt="Cover Image"
       size="square"
       type="text"
@@ -56,7 +54,6 @@ const Culture = () => (
       }
     />
     <Card
-      image={Library1}
       alt="Cover Image"
       size="square"
       type="text"
@@ -72,7 +69,6 @@ const Culture = () => (
       }
     />
     <Card
-      image={Library1}
       alt="Cover Image"
       size="square"
       type="text"
