@@ -8,11 +8,12 @@ interface UserReviewData {
   job: string;
   review: string;
 }
+
 const getReviewData = async () => {
   const userReviewData: UserReviewData[] = [];
 
   try {
-    const userData = await getUserData({ num: 6, group: "TheReviewer" });
+    const userData = await getUserData(6);
     const userJob = getRandomProfession();
     const userReview = getRandomReview();
 
@@ -24,11 +25,23 @@ const getReviewData = async () => {
         review: userReview[i],
       });
     }
+
+    userReviewData.push(userReviewData[0]);
+    userReviewData.push(userReviewData[1]);
   } catch (error) {
     console.error("Error fetching reviewer data:", error);
   }
 
+  localStorage.setItem("userReviewData", JSON.stringify(userReviewData));
   return userReviewData;
 };
 
-export default getReviewData;
+const getReview = () => {
+  if (localStorage.getItem("userReviewData")) {
+    return JSON.parse(localStorage.getItem("userReviewData")!);
+  } else {
+    return getReviewData();
+  }
+};
+
+export default getReview;

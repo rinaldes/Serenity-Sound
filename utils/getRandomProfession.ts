@@ -33,9 +33,6 @@ const getRandomProfession = () => {
     }
   }
 
-  selectedProfessions.push(selectedProfessions[0]);
-  selectedProfessions.push(selectedProfessions[1]);
-
   return selectedProfessions;
 };
 

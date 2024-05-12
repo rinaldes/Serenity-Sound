@@ -29,9 +29,6 @@ const getRandomReview = () => {
     }
   }
 
-  selectedReview.push(selectedReview[0]);
-  selectedReview.push(selectedReview[1]);
-
   return selectedReview;
 };
 
