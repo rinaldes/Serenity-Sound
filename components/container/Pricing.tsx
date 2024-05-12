@@ -12,16 +12,26 @@ const Pricing = () => (
       alt="Cover Image"
       size="width"
       type="text"
-      title={<Heading type="h3" text="Find Your Perfect Plan with Serenity" />}
+      content={
+        <div>
+          <Heading
+            type="h2"
+            text="Ready to Start Your Journey Toward Serenity?"
+          />
+          <br />
+          <Heading type="h3" text="Find Your Perfect Plan with Serenity" />
+        </div>
+      }
     />
     <Card
       image={Library2}
       alt="Cover Image"
       size="rectangle"
       type="text"
-      title={
+      content={
         <div>
           <Heading type="h2" text="Serenity Breathe" />
+          <br />
           <Text
             type="p"
             text="Take a deep breath and find moments of calm with our complimentary tier."
@@ -34,9 +44,10 @@ const Pricing = () => (
       alt="Cover Image"
       size="rectangle"
       type="text"
-      title={
+      content={
         <div>
           <Heading type="h2" text="Serenity Unwind" />
+          <br />
           <Text
             type="p"
             text="Upgrade to Serenity Unwind and unlock a world of personalized peace."

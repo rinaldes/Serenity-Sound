@@ -23,6 +23,7 @@ const ImageComponent = ({
     src={src.src}
     className={className}
     removeWrapper={removeWrapper}
+    fallbackSrc={`https://via.placeholder.com/${src.width}x${src.height}`}
   />
 );
 

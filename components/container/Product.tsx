@@ -12,8 +12,8 @@ const Product = () => (
       alt="Cover Image"
       size="width"
       type="text"
-      title={
-        <div className="px-8">
+      content={
+        <div>
           <Heading type="h3" text="Your Music Sanctuary Awaits" />
           <br />
           <Text
@@ -28,7 +28,7 @@ const Product = () => (
       alt="Cover Image"
       size="square"
       type="text"
-      title={
+      content={
         <div>
           <Heading type="h2" text="Serenity Music" />
           <br />
@@ -45,7 +45,7 @@ const Product = () => (
       alt="Cover Image"
       size="square"
       type="text"
-      title={
+      content={
         <div>
           <Heading type="h2" text="Get Your Journey with Serenity Now" />
         </div>

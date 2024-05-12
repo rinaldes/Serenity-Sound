@@ -13,7 +13,7 @@ const Review = () => (
       alt="Cover Image"
       size="width"
       type="text"
-      title={
+      content={
         <Heading
           type="h3"
           text="Hear What Our Users Are Saying About Serenity"
@@ -28,7 +28,7 @@ const Review = () => (
           alt="Cover Image"
           size="rectangle"
           type="text"
-          title={
+          content={
             <article className="px-8">
               <Text
                 type="p"
@@ -57,7 +57,7 @@ const Review = () => (
           alt="Cover Image"
           size="rectangle"
           type="text"
-          title={
+          content={
             <article className="px-8">
               <Text
                 type="p"
@@ -86,7 +86,7 @@ const Review = () => (
           alt="Cover Image"
           size="rectangle"
           type="text"
-          title={
+          content={
             <article className="px-8">
               <Text
                 type="p"
@@ -115,7 +115,7 @@ const Review = () => (
           alt="Cover Image"
           size="rectangle"
           type="text"
-          title={
+          content={
             <article className="px-8">
               <Text
                 type="p"

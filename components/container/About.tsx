@@ -11,7 +11,7 @@ import { Heading, Text } from "../typography";
 
 const About = () => (
   <section
-    id="about"
+    id="company"
     className="gap-4 grid grid-cols-6 grid-rows-2 pt-12 pb-2 snap-end"
   >
     <Card
@@ -19,7 +19,7 @@ const About = () => (
       alt="Cover Image"
       size="width"
       type="text"
-      title={<Logo type="large" variant="width" />}
+      content={<Logo type="large" variant="width" />}
     />
     <Card image={Image1} alt="Cover Image" size="square" type="cover" />
     <Card image={Library1} alt="Cover Image" size="square" type="cover" />
@@ -28,8 +28,8 @@ const About = () => (
       alt="Cover Image"
       size="width"
       type="text"
-      title={
-        <div className="px-8">
+      content={
+        <div>
           <Heading type="h3" text="Crafted with Care by Serenity" />
           <br />
           <Text

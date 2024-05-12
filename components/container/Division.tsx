@@ -13,7 +13,7 @@ const Division = () => (
       alt="Cover Image"
       size="width"
       type="text"
-      title={
+      content={
         <div>
           <Heading type="h3" text="Music Curator" />
           <Text
@@ -28,7 +28,7 @@ const Division = () => (
       alt="Cover Image"
       size="square"
       type="text"
-      title={
+      content={
         <div>
           <Heading type="h2" text="Serenity Breathe" />
           <Text
@@ -43,7 +43,7 @@ const Division = () => (
       alt="Cover Image"
       size="square"
       type="text"
-      title={
+      content={
         <div>
           <Heading type="h2" text="Serenity Unwind" />
           <Text
@@ -58,7 +58,7 @@ const Division = () => (
       alt="Cover Image"
       size="square"
       type="text"
-      title={
+      content={
         <div>
           <Heading type="h2" text="Serenity Unwind" />
           <Text
