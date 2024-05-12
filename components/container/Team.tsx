@@ -5,7 +5,7 @@ import { Heading, Text } from "@/components/typography";
 const Team = () => (
   <section
     id="team"
-    className="gap-4 grid grid-cols-6 grid-rows-2 pt-12 pb-4 snap-end"
+    className="gap-5 grid grid-cols-6 grid-rows-2 pt-12 pb-4 snap-end"
   >
     <Card image={TheTeam} alt="Cover Image" size="square" type="cover" />
     <Card

@@ -1,10 +1,10 @@
-import { Card } from "@/components";
+import { Button, Card } from "@/components";
 import { Library2, TheApp } from "@/assets/Images";
 import { Heading, Text } from "../typography";
 const Product = () => (
   <section
     id="product"
-    className="gap-4 grid grid-cols-6 grid-rows-2 pt-12 pb-4 snap-end"
+    className="gap-5 grid grid-cols-6 grid-rows-2 pt-12 pb-4 snap-end"
   >
     <Card image={Library2} alt="Cover Image" size="square" type="cover" />
     <Card
@@ -36,18 +36,22 @@ const Product = () => (
             type="p"
             text="Personalized playlists for different moods and activities"
           />
+          <Text type="p" text="Vast library of calming music" />
+          <Text type="p" text="High-fidelity audio quality" />
+          <Text type="p" text="Sleep timers and relaxation tools" />
         </div>
       }
     />
     <Card image={TheApp} alt="Cover Image" size="square" type="cover" />
     <Card
-      image={Library2}
       alt="Cover Image"
       size="square"
       type="text"
       content={
-        <div>
+        <div className="text-center">
           <Heading type="h2" text="Get Your Journey with Serenity Now" />
+          <br />
+          <Button url="/services#plan" text="Choose Your Plan" />
         </div>
       }
     />

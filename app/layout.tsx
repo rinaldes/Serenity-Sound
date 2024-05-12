@@ -35,7 +35,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
             >
               <div className="flex flex-col">
                 <Navbar />
-                {children}
+                <div className="px-6">{children}</div>
               </div>
             </div>
           </main>

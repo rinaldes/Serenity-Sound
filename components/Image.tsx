@@ -5,16 +5,9 @@ interface ImageProps {
   src: StaticImageData;
   alt: string;
   className?: string;
-  removeWrapper?: boolean;
   size?: "large" | "small";
 }
-const ImageComponent = ({
-  src,
-  alt,
-  className,
-  size,
-  removeWrapper,
-}: ImageProps) => (
+const ImageComponent = ({ src, alt, className, size }: ImageProps) => (
   <Image
     as={NextImage}
     width={size === "large" ? src.width / 4 : src.width}
@@ -22,7 +15,8 @@ const ImageComponent = ({
     alt={alt}
     src={src.src}
     className={className}
-    removeWrapper={removeWrapper}
+    removeWrapper
+    isZoomed
     fallbackSrc={`https://via.placeholder.com/${src.width}x${src.height}`}
   />
 );

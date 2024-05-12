@@ -53,7 +53,7 @@ const Review = () => {
   return (
     <section
       id="review"
-      className="gap-4 grid grid-cols-6 grid-rows-2 pt-12 pb-4 snap-end"
+      className="gap-x-5 grid grid-cols-6 grid-rows-2 pt-12 snap-end"
     >
       <Card
         image={Library1}
@@ -69,7 +69,7 @@ const Review = () => {
       />
       <Card image={Library1} alt="Cover Image" size="square" type="cover" />
       <article className="w-[400%] col-span-6 overflow-hidden auto-scroll">
-        <div className="w-[100%] grid grid-cols-8 gap-8 pb-8">{userReview}</div>
+        <div className="w-[100%] grid grid-cols-8 gap-8 pb-4">{userReview}</div>
       </article>
     </section>
   );
