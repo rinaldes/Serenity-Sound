@@ -1,4 +1,4 @@
-import { reviews } from "@/configs/reviews";
+import { reviews } from "@/config/reviews";
 const getRandomReview = () => {
   const selectedReview: string[] = [];
 

@@ -1,4 +1,4 @@
-import { professions } from "@/configs/professions";
+import { professions } from "@/config/professions";
 const getRandomProfession = () => {
   const selectedProfessions: string[] = [];
 

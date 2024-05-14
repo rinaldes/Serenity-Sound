@@ -1,7 +1,7 @@
 import "styles/globals.css";
 import { Metadata } from "next";
-import { siteConfig } from "@/configs/sites";
-import { bodyFont } from "@/configs/fonts";
+import { siteConfig } from "@/config/site";
+import { bodyFont } from "@/config/fonts";
 import { Aside, Navbar, Footer } from "@/components/layout";
 
 export const metadata: Metadata = {

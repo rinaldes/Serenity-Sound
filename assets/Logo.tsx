@@ -1,5 +1,5 @@
 import { Image } from "@/components";
-import { titleFont } from "@/configs/fonts";
+import { titleFont } from "@/config/fonts";
 import SerenityLogo from "@/public/logos/serenity-logo-sm.webp";
 import SerenityLogoBig from "@/public/logos/serenity-logo.webp";
 

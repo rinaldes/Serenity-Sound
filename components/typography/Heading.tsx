@@ -1,4 +1,4 @@
-import { titleFont } from "@/configs/fonts";
+import { titleFont } from "@/config/fonts";
 
 interface HeadingProps {
   type: "h1" | "h2" | "h3";

@@ -6,7 +6,7 @@ import {
 } from "@nextui-org/navbar";
 import Link from "next/link";
 import Logo from "@/assets/Logo";
-import { siteConfig } from "@/configs/sites";
+import { siteConfig } from "@/config/site";
 
 const link = siteConfig.navItems.map(({ href, label }) => (
   <NavbarItem key={label}>
