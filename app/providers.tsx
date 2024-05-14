@@ -10,6 +10,10 @@ export interface ProvidersProps {
   themeProps?: ThemeProviderProps;
 }
 
+/*
+ * Low Priority: Will do later after the mandatory completed
+ */
+
 export function Providers({ children, themeProps }: ProvidersProps) {
   const router = useRouter();
 

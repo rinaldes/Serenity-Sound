@@ -9,6 +9,9 @@ import AppDev from "@/public/images/app-dev.webp";
 import AudioSpes from "@/public/images/audio-spes.webp";
 import MusicCur from "@/public/images/music-curator.webp";
 import TheTeam from "@/public/images/team.webp";
+import MusicShare from "@/public/images/music-share.webp";
+import Walking from "@/public/images/walking.webp";
+import Subscribe from "@/public/images/subscribe.webp";
 
 export {
   CoverImage,
@@ -22,4 +25,7 @@ export {
   AudioSpes,
   MusicCur,
   TheTeam,
+  MusicShare,
+  Walking,
+  Subscribe,
 };

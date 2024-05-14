@@ -1,13 +1,12 @@
 import { Card } from "@/components";
-import { Library1 } from "@/assets/Images";
+import { Library1, Walking } from "@/assets/Images";
 import { Heading, Text } from "../typography";
 const History = () => (
   <section
     id="history"
-    className="gap-4 grid grid-cols-6 grid-rows-2 pt-12 pb-4 snap-end"
+    className="gap-5 grid grid-cols-6 grid-rows-2 pt-12 pb-4 snap-end"
   >
     <Card
-      image={Library1}
       alt="Cover Image"
       size="width"
       type="text"
@@ -22,9 +21,8 @@ const History = () => (
         </div>
       }
     />
-    <Card image={Library1} alt="Cover Image" size="square" type="cover" />
+    <Card image={Walking} alt="Cover Image" size="square" type="image" />
     <Card
-      image={Library1}
       alt="Cover Image"
       size="rectangle"
       type="text"
@@ -46,7 +44,7 @@ const History = () => (
           text="Today, Serenity offers a vast library of music, personalized features, and a user-friendly app to help you find moments of calm in your everyday life."
         />
       }
-    />{" "}
+    />
   </section>
 );
 

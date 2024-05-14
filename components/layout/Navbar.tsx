@@ -10,7 +10,7 @@ import { siteConfig } from "@/config/site";
 
 const link = siteConfig.navItems.map(({ href, label }) => (
   <NavbarItem key={label}>
-    <Link color="foreground" href={href}>
+    <Link color="foreground" href={href} scroll={false}>
       {label}
     </Link>
   </NavbarItem>

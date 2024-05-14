@@ -15,10 +15,10 @@ const CoverCard = ({ cardSize, alt, image }: CardProps) => (
         <Heading type="h1" text="Serenity Sound" /> */}
     </CardHeader>
     <Image
-      removeWrapper
       alt={alt}
       className="z-0 w-full h-full object-cover"
       src={image}
+      isZoomable={false}
     />
   </Card>
 );

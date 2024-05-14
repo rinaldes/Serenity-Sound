@@ -1,18 +1,12 @@
 import { Card } from "@/components";
-import {
-  CoverImage,
-  Studio,
-  Library1,
-  Library2,
-  Image1,
-} from "@/assets/Images";
+import { MusicShare, Studio, Library1, Image1 } from "@/assets/Images";
 import Logo from "@/assets/Logo";
 import { Heading, Text } from "../typography";
 
 const About = () => (
   <section
     id="company"
-    className="gap-4 grid grid-cols-6 grid-rows-2 pt-12 pb-2 snap-end"
+    className="gap-5 grid grid-cols-6 grid-rows-2 pt-12 pb-4 snap-end"
   >
     <Card
       image={Studio}
@@ -21,8 +15,8 @@ const About = () => (
       type="text"
       content={<Logo type="large" variant="width" />}
     />
-    <Card image={Image1} alt="Cover Image" size="square" type="cover" />
-    <Card image={Library1} alt="Cover Image" size="square" type="cover" />
+    <Card image={Image1} alt="Cover Image" size="square" type="image" />
+    <Card image={MusicShare} alt="Cover Image" size="square" type="image" />
     <Card
       image={Library1}
       alt="Cover Image"

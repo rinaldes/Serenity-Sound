@@ -1,7 +1,8 @@
 import "styles/globals.css";
 import { Metadata } from "next";
-import { siteConfig } from "config/site";
+import { siteConfig } from "@/config/site";
 import { bodyFont } from "@/config/fonts";
+import { Aside, Navbar, Footer } from "@/components/layout";
 
 export const metadata: Metadata = {
   title: {
@@ -14,11 +15,34 @@ export const metadata: Metadata = {
   },
 };
 
+/*
+  TODO: You must be kidding, lol! Don't forget to Simplyfied this!
+*/
+
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en" suppressHydrationWarning>
-    <head />
     <body className={`${bodyFont.variable} font-body bg-white-lavender`}>
-      {children}
+      <div className="flex h-screen">
+        <div className="w-1/12 flex-row">
+          <Aside />
+        </div>
+        <div className="w-11/12 max-w-11/12 pr-12 mb-16">
+          <main className="h-full max-w-full rounded-3xl">
+            <div
+              className="overflow-y-auto h-full snap-y snap-mandatory"
+              style={{ scrollbarWidth: "none" }}
+            >
+              <div className="flex flex-col">
+                <Navbar />
+                <div className="px-6">{children}</div>
+              </div>
+            </div>
+          </main>
+          <div className="w-full pl-4 pr-8">
+            <Footer />
+          </div>
+        </div>
+      </div>
     </body>
   </html>
 );

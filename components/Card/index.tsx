@@ -20,9 +20,9 @@ const CardComponent = ({ size, image, alt, type, content }: CardProps) => {
 
   const cardSize = {
     cover: "col-span-6 h-[35.25rem]",
-    width: "col-span-4 h-[17rem]",
-    rectangle: "col-span-3 h-[17rem]",
-    square: "col-span-2 h-[17rem]",
+    width: "col-span-4 h-[16.15rem]",
+    rectangle: "col-span-3 h-[16.15rem]",
+    square: "col-span-2 h-[16.15rem]",
   }[size];
 
   return (

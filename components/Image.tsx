@@ -5,15 +5,15 @@ interface ImageProps {
   src: StaticImageData;
   alt: string;
   className?: string;
-  removeWrapper?: boolean;
   size?: "large" | "small";
+  isZoomable?: boolean;
 }
 const ImageComponent = ({
   src,
   alt,
   className,
   size,
-  removeWrapper,
+  isZoomable = true,
 }: ImageProps) => (
   <Image
     as={NextImage}
@@ -22,7 +22,8 @@ const ImageComponent = ({
     alt={alt}
     src={src.src}
     className={className}
-    removeWrapper={removeWrapper}
+    removeWrapper
+    isZoomed={isZoomable}
     fallbackSrc={`https://via.placeholder.com/${src.width}x${src.height}`}
   />
 );

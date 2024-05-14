@@ -6,3 +6,4 @@ export { default as Review } from "./Review";
 export { default as Culture } from "./Culture";
 export { default as History } from "./History";
 export { default as Pricing } from "./Pricing";
+export { default as Division } from "./Division";
