@@ -6,11 +6,11 @@ import {
 } from "@nextui-org/navbar";
 import Link from "next/link";
 import Logo from "@/assets/Logo";
-import { siteConfig } from "@/config/site";
+import { siteConfig } from "@/configs/sites";
 
 const link = siteConfig.navItems.map(({ href, label }) => (
   <NavbarItem key={label}>
-    <Link color="foreground" href={href}>
+    <Link color="foreground" href={href} scroll={false}>
       {label}
     </Link>
   </NavbarItem>

@@ -44,7 +44,7 @@ const History = () => (
           text="Today, Serenity offers a vast library of music, personalized features, and a user-friendly app to help you find moments of calm in your everyday life."
         />
       }
-    />{" "}
+    />
   </section>
 );
 

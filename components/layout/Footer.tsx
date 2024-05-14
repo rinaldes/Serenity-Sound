@@ -1,6 +1,6 @@
 import { SocialIcon } from "@/assets/Icons";
-import { siteConfig } from "@/config/site";
-import { Text } from "components/typography";
+import { siteConfig } from "@/configs/sites";
+import { Text } from "@/components/typography";
 import Link from "next/link";
 
 const link = siteConfig.socialLinks.map(({ href, icon }) => (

@@ -1,71 +1,27 @@
-import { Library2 } from "@/assets/Images";
-import { Card } from "@/components";
-import { Heading, Text } from "@/components/typography";
+import { AppDev, AudioSpes, MusicCur } from "@/assets/Images";
+import DivisionMember from "./DivisionMember";
 
-const Division = ({}) => (
-  <section
-    id="team"
-    className="gap-5 grid grid-cols-6 grid-rows-2 pt-12 pb-4 snap-end"
-  >
-    <Card image={Library2} alt="Cover Image" size="square" type="image" />
-    <Card
-      image={Library2}
-      alt="Cover Image"
-      size="width"
-      type="text"
-      content={
-        <div>
-          <Heading type="h3" text="Music Curator" />
-          <Text
-            type="p"
-            text="A dedicated team with a discerning ear for calming melodies and a deep understanding of music's impact on mood. They meticulously craft playlists that cater to a variety of moods and needs"
-          />
-        </div>
-      }
+const Division = () => (
+  <>
+    <DivisionMember
+      division="Music Curator"
+      image={MusicCur}
+      desc="A dedicated team with a discerning ear for calming melodies and a deep understanding of music's impact on mood. They meticulously craft playlists that cater to a variety of moods and needs."
+      members={[]}
     />
-    <Card
-      alt="Cover Image"
-      size="square"
-      type="text"
-      content={
-        <div>
-          <Heading type="h2" text="Serenity Breathe" />
-          <Text
-            type="p"
-            text="Take a deep breath and find moments of calm with our complimentary tier."
-          />
-        </div>
-      }
+    <DivisionMember
+      division="Audio Specialists"
+      image={AudioSpes}
+      desc="Experts who ensure the music on Serenity is delivered in the highest quality, creating an immersive and restorative listening experience. They fine-tune the audio for optimal sound clarity and user enjoyment."
+      members={[]}
     />
-    <Card
-      alt="Cover Image"
-      size="square"
-      type="text"
-      content={
-        <div>
-          <Heading type="h2" text="Serenity Unwind" />
-          <Text
-            type="p"
-            text="Upgrade to Serenity Unwind and unlock a world of personalized peace."
-          />
-        </div>
-      }
+    <DivisionMember
+      division="App Developer"
+      image={AppDev}
+      desc="Talented individuals who craft a user-friendly and intuitive app that seamlessly integrates into your life. They prioritize a smooth user experience to enhance your journey towards serenity."
+      members={[]}
     />
-    <Card
-      alt="Cover Image"
-      size="square"
-      type="text"
-      content={
-        <div>
-          <Heading type="h2" text="Serenity Unwind" />
-          <Text
-            type="p"
-            text="Upgrade to Serenity Unwind and unlock a world of personalized peace."
-          />
-        </div>
-      }
-    />
-  </section>
+  </>
 );
 
 export default Division;

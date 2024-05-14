@@ -37,8 +37,9 @@ const getReviewData = async () => {
 };
 
 const getReview = () => {
-  if (localStorage.getItem("userReviewData")) {
-    return JSON.parse(localStorage.getItem("userReviewData")!);
+  const userReview = localStorage.getItem("userReviewData");
+  if (userReview) {
+    return JSON.parse(userReview!);
   } else {
     return getReviewData();
   }

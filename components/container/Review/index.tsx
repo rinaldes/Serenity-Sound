@@ -7,37 +7,12 @@ import { Library1 } from "@/assets/Images";
 import { Avatar, AvatarGroup } from "@nextui-org/avatar";
 import { getReview, getThumbnail } from "@/utils";
 import "./review.css";
-
-const renderUserReviews = (userReview: any) => {
-  return userReview.map((result: any, index: number) => (
-    <div key={index}>
-      <Card
-        key={index}
-        alt="Cover Image"
-        size="rectangle"
-        type="text"
-        content={
-          <article className="px-8">
-            <Text type="p" variant="italic" text={`‟ ${result.review} ”`} />
-            <br />
-            <div className="grid grid-cols-[1fr_4fr]">
-              <Avatar isBordered radius="full" src={result.picture} size="lg" />
-              <div>
-                <Heading type="h3" text={result.name} />
-                <p>{result.job}</p>
-              </div>
-            </div>
-          </article>
-        }
-      />
-    </div>
-  ));
-};
+import ReviewCard from "./ReviewCard";
 
 const fetchTheReviewer = async () => {
   try {
     const userReviewData = await getReview();
-    return renderUserReviews(userReviewData);
+    return ReviewCard(userReviewData);
   } catch (error) {
     console.error("Error fetching reviewer data:", error);
   }
@@ -55,7 +30,6 @@ const Review = () => {
       className="gap-x-5 grid grid-cols-6 grid-rows-2 pt-12 snap-end"
     >
       <Card
-        image={Library1}
         alt="Cover Image"
         size="width"
         type="text"
@@ -75,9 +49,9 @@ const Review = () => {
                 </p>
               )}
             >
-              {getThumbnail().map((result: any, index: number) => (
+              {/* {getThumbnail().map((result: any, index: number) => (
                 <Avatar key={index} src={result} size="sm" />
-              ))}
+              ))} */}
             </AvatarGroup>
           </div>
         }

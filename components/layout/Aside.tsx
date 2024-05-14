@@ -1,5 +1,5 @@
 import { PageIcon } from "@/assets/Icons";
-import { siteConfig } from "@/config/site";
+import { siteConfig } from "@/configs/sites";
 import Link from "next/link";
 
 const link = siteConfig.homeLinks.map(({ href, icon }) => (

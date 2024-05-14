@@ -1,7 +1,7 @@
-const getUserData = async (num: number) => {
+const getUserData = async (num: number, gender?: "male" | "female") => {
   try {
     const response = await fetch(
-      `https://randomuser.me/api/?inc=picture,name&results=${num}`
+      `https://randomuser.me/api/?inc=picture,name&results=${num}&gender=${gender}`
     );
     const data = await response.json();
     return data;

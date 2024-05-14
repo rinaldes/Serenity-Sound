@@ -1,7 +1,7 @@
 import "styles/globals.css";
 import { Metadata } from "next";
-import { siteConfig } from "config/site";
-import { bodyFont } from "@/config/fonts";
+import { siteConfig } from "@/configs/sites";
+import { bodyFont } from "@/configs/fonts";
 import { Aside, Navbar, Footer } from "@/components/layout";
 
 export const metadata: Metadata = {
@@ -21,7 +21,6 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en" suppressHydrationWarning>
-    <head />
     <body className={`${bodyFont.variable} font-body bg-white-lavender`}>
       <div className="flex h-screen">
         <div className="w-1/12 flex-row">
