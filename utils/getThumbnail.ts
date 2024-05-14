@@ -1,18 +1,26 @@
 import getUserData from "./getUserData";
 
 const getThumbnailData = async () => {
-  const thumbnails = (await getUserData(5)).results.map(
-    ({ picture: { thumbnail } }: any) => thumbnail
-  );
-  localStorage.setItem("userThumbnail", JSON.stringify(thumbnails));
-  return thumbnails;
+  const thumbnailData: string[] = [];
+  try {
+    const thumbnails = await getUserData(5);
+    for (let i = 0; i < thumbnails.results.length; i++) {
+      thumbnailData.push(thumbnails.results[i].picture.thumbnail);
+    }
+  } catch (error) {
+    console.error("Error fetching thumbnail data:", error);
+  }
+
+  localStorage.setItem("userThumbnail", JSON.stringify(thumbnailData));
+  return thumbnailData;
 };
 
 const getThumbnail = () => {
-  if (localStorage.getItem("userThumbnail")) {
-    return JSON.parse(localStorage.getItem("userThumbnail")!);
+  const thumbnail = localStorage.getItem("userThumbnail");
+  if (thumbnail) {
+    return JSON.parse(thumbnail!);
   } else {
-    return getThumbnailData;
+    return getThumbnailData();
   }
 };
 

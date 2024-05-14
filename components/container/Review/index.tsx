@@ -18,10 +18,41 @@ const fetchTheReviewer = async () => {
   }
 };
 
+const fetchTheThumbnail = async () => {
+  try {
+    const userThumbnail = await getThumbnail();
+    return ThumbnailCard(userThumbnail);
+  } catch (error) {
+    console.error("Error fetching thumbnail data:", error);
+  }
+};
+
+const ThumbnailCard = (thumbnail: any) => {
+  const thumbnailData = (
+    <AvatarGroup
+      isBordered
+      max={4}
+      renderCount={() => (
+        <p className="text-small text-foreground font-medium ms-2">
+          + 6.2 Million others
+        </p>
+      )}
+    >
+      {thumbnail.map((result: any, index: number) => (
+        <Avatar key={index} src={result} size="sm" />
+      ))}
+    </AvatarGroup>
+  );
+
+  return thumbnailData;
+};
+
 const Review = () => {
   const [userReview, setUserReview] = useState<any>(null);
+  const [userThumbnail, setUserThumbnail] = useState<any>(null);
   useEffect(() => {
     setUserReview(fetchTheReviewer());
+    setUserThumbnail(fetchTheThumbnail());
   }, []);
 
   return (
@@ -40,19 +71,7 @@ const Review = () => {
               text="Hear What Our Users Are Saying About Serenity"
             />
             <br />
-            <AvatarGroup
-              isBordered
-              max={4}
-              renderCount={() => (
-                <p className="text-small text-foreground font-medium ms-2">
-                  + 6.2 Million others
-                </p>
-              )}
-            >
-              {/* {getThumbnail().map((result: any, index: number) => (
-                <Avatar key={index} src={result} size="sm" />
-              ))} */}
-            </AvatarGroup>
+            {userThumbnail}
           </div>
         }
       />
