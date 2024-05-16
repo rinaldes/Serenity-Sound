@@ -10,12 +10,7 @@ interface CardProps {
 
 const ImageCard = ({ cardSize, alt, image }: CardProps) => (
   <Card className={cardSize}>
-    <Image
-      removeWrapper
-      alt={alt}
-      className="z-0 w-full h-full object-cover"
-      src={image}
-    />
+    <Image alt={alt} className="z-0 w-full h-full object-cover" src={image} />
   </Card>
 );
 
