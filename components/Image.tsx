@@ -5,7 +5,7 @@ interface ImageProps {
   src: StaticImageData;
   alt: string;
   className?: string;
-  size?: "large" | "small";
+  size?: "large" | "small" | "smol";
   isZoomable?: boolean;
 }
 const ImageComponent = ({
@@ -17,8 +17,20 @@ const ImageComponent = ({
 }: ImageProps) => (
   <Image
     as={NextImage}
-    width={size === "large" ? src.width / 4 : src.width}
-    height={size === "large" ? src.height / 4 : src.height}
+    width={
+      size === "large"
+        ? src.width / 4
+        : size === "smol"
+        ? src.width / 1.5
+        : src.width
+    }
+    height={
+      size === "large"
+        ? src.height / 4
+        : size === "smol"
+        ? src.height / 1.5
+        : src.height
+    }
     alt={alt}
     src={src.src}
     className={className}

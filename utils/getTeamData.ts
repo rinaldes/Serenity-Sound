@@ -1,21 +1,41 @@
+import { StaticImageData } from "next/image";
 import getUserData from "./getUserData";
+import { appDevelopers, audioSpecialists, musicCurators } from "@/config/teams";
 
 interface TeamData {
   name: string;
-  picture: string;
+  picture: StaticImageData;
+  background: string;
+  title: string;
+  quote: string;
 }
 
 const getTeamData = async (division: string) => {
   const teamData: TeamData[] = [];
+  const teamBackground =
+    division === "Audio Specialists"
+      ? audioSpecialists
+      : division === "Music Curator"
+      ? musicCurators
+      : appDevelopers;
+  console.log(teamBackground);
   try {
     const userData = await getUserData(
       3,
-      division === "audioSpecialists" ? "male" : "female"
+      division === "Audio Specialists" ? "male" : "female"
     );
     for (let i = 0; i < userData.results.length; i++) {
+      const staticImage: StaticImageData = {
+        src: userData.results[i].picture.large,
+        width: 128,
+        height: 128,
+      };
       teamData.push({
         name: `${userData.results[i].name.title}. ${userData.results[i].name.first} ${userData.results[i].name.last}`,
-        picture: userData.results[i].picture.medium,
+        picture: staticImage,
+        background: teamBackground[i].background,
+        title: teamBackground[i].title,
+        quote: teamBackground[i].quote,
       });
     }
     localStorage.setItem(division, JSON.stringify(teamData));

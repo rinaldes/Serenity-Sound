@@ -1,55 +1,100 @@
-import { Card } from "@/components";
+"use client";
+import { Card, Image } from "@/components";
 import { Heading, Text } from "@/components/typography";
 import { StaticImageData } from "next/image";
-
+import { useEffect, useState } from "react";
+import FetchTeam from "./FetchTeam";
 interface DivisionMemberProps {
   division: string;
   image: StaticImageData;
   desc: string;
-  members: {
-    name: string;
-    image: string;
-    desc: string;
-  }[];
 }
 
-const DivisionMember = ({
-  division,
-  image,
-  desc,
-  members,
-}: DivisionMemberProps) => (
-  <section
-    id="team"
-    className="gap-5 grid grid-cols-6 grid-rows-2 pt-12 pb-4 snap-end"
-  >
-    <Card image={image} alt="Cover Image" size="square" type="image" />
-    <Card
-      alt="Cover Image"
-      size="width"
-      type="text"
-      content={
-        <div>
-          <Heading type="h3" text={division} />
-          <Text type="p" text={desc} />
-        </div>
-      }
-    />
-    {members.map((member, index) => (
+const fetchData = async (division: string, image: StaticImageData) => {
+  try {
+    const team = await FetchTeam(division);
+    return TeamCard(team, image);
+  } catch (error) {
+    console.error("Error fetching team data:", error);
+  }
+};
+
+const TeamCard = (teamMember: any, image: StaticImageData) => {
+  const teamData = (
+    <>
+      {teamMember.map(
+        (
+          member: {
+            name: string;
+            picture: StaticImageData;
+            background: string;
+            title: string;
+            quote: string;
+          },
+          index: number
+        ) => (
+          <Card
+            key={index}
+            alt="Cover Image"
+            size="square"
+            type="combination"
+            image={image}
+            variant="2"
+            content={
+              <div className="flex flex-col h-full justify-start py-4 gap-6">
+                <div className="flex flex-row gap-4 items-center">
+                  <Image alt="Cover Image" src={member.picture} size="smol" />
+                  <div>
+                    <Heading type="h4" text={member.name} />
+                    <Text
+                      type="p"
+                      className="text-md font-bold"
+                      text={member.title}
+                    />
+                  </div>
+                </div>
+                <Text
+                  type="p"
+                  className="text-md text-center mx-2"
+                  text={member.quote}
+                />
+              </div>
+            }
+          />
+        )
+      )}
+    </>
+  );
+
+  return teamData;
+};
+
+const DivisionMember = ({ division, image, desc }: DivisionMemberProps) => {
+  const [teamMember, setTeamMember] = useState<any>(null);
+  useEffect(() => {
+    setTeamMember(fetchData(division, image));
+  }, [division, image]);
+  return (
+    <section
+      id="team"
+      className="gap-5 grid grid-cols-6 grid-rows-2 pt-12 pb-4 snap-end"
+    >
+      <Card image={image} alt="Cover Image" size="square" type="image" />
       <Card
-        key={index}
         alt="Cover Image"
-        size="square"
-        type="combination"
+        size="width"
+        type="text"
         content={
           <div>
-            <Heading type="h3" text={member.name} />
-            <Text type="p" text={member.desc} />
+            <Heading type="h3" text={division} />
+            <br />
+            <Text type="p" text={desc} />
           </div>
         }
       />
-    ))}
-  </section>
-);
+      {teamMember}
+    </section>
+  );
+};
 
 export default DivisionMember;

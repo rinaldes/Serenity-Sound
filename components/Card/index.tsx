@@ -8,9 +8,17 @@ interface CardProps {
   alt: string;
   image?: StaticImageData;
   content?: JSX.Element;
+  variant?: string;
 }
 
-const CardComponent = ({ size, image, alt, type, content }: CardProps) => {
+const CardComponent = ({
+  size,
+  image,
+  alt,
+  type,
+  content,
+  variant = "1",
+}: CardProps) => {
   const Card = {
     cover: CoverCard,
     image: ImageCard,
@@ -24,13 +32,13 @@ const CardComponent = ({ size, image, alt, type, content }: CardProps) => {
     rectangle: "col-span-3 h-[16.15rem]",
     square: "col-span-2 h-[16.15rem]",
   }[size];
-
   return (
     <Card
       cardSize={cardSize}
       alt={alt}
       image={image ?? dummyImage}
       content={content}
+      variant={variant}
     />
   );
 };
