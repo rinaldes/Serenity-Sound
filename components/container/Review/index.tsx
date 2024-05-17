@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 
 import { Card } from "@/components";
-import { Heading, Text } from "@/components/typography";
+import { Heading } from "@/components/typography";
 import { Library1 } from "@/assets/Images";
 import { Avatar, AvatarGroup } from "@nextui-org/avatar";
 import { getReview, getThumbnail } from "@/utils";

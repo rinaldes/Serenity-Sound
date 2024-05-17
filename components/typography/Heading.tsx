@@ -1,7 +1,7 @@
 import { titleFont } from "@/config/fonts";
 
 interface HeadingProps {
-  type: "h1" | "h2" | "h3";
+  type: "h1" | "h2" | "h3" | "h4";
   text: string;
   className?: string;
 }
@@ -28,6 +28,14 @@ const Heading = ({ type, text, className }: HeadingProps) => {
       return (
         <h3
           className={`${titleFont.variable} font-semibold font-title text-xl ${className}`}
+        >
+          {text}
+        </h3>
+      );
+    case "h4":
+      return (
+        <h3
+          className={`${titleFont.variable} font-semibold font-title text-lg ${className}`}
         >
           {text}
         </h3>
