@@ -38,10 +38,10 @@ const Nav = () => {
       <NavbarBrand>
         <Logo />
       </NavbarBrand>
-      <NavbarContent className="hidden md:flex gap-6" justify="end">
+      <NavbarContent className="hidden lg:flex gap-6" justify="end">
         {link}
       </NavbarContent>
-      <NavbarContent className="flex md:hidden" justify="end">
+      <NavbarContent className="flex lg:hidden" justify="end">
         <Link color="foreground" href="#" onClick={() => onOpen()}>
           <List size={24} />
         </Link>

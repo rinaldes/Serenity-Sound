@@ -4,7 +4,7 @@ import { Heading, Text } from "../typography";
 const History = () => (
   <section
     id="history"
-    className="gap-5 grid md:grid-cols-6 md:grid-rows-2 pt-4 md:pt-12 pb-4 md:snap-end"
+    className="gap-5 grid md:grid-cols-6 md:grid-rows-2 pt-4 lg:pt-12 pb-4 lg:snap-end"
   >
     <Card
       alt="Cover Image"
@@ -37,12 +37,12 @@ const History = () => (
           <Text
             type="p"
             text="We started with a small collection of calming playlists, meticulously crafted to ease stress and promote peace. As our community grew, so did our vision. We assembled a team of music experts, audio specialists, and app developers, all driven by a common goal: to curate a sonic sanctuary for all."
-            className="hidden md:block"
+            className="hidden lg:block"
           />
           <Text
             type="p"
             text="Started from small, crafted playlists to ease stress and promote peace. As our community grew, we assembled a team of music experts, audio specialists, and app developers, driven by a goal to curate a sanctuary."
-            className="block md:hidden"
+            className="block lg:hidden"
           />
         </>
       }

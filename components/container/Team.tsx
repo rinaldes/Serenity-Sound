@@ -10,7 +10,7 @@ const Team = () => {
   return (
     <section
       id="team"
-      className="gap-5 grid md:grid-cols-6 md:grid-rows-2 pt-4 md:pt-12 pb-4 md:snap-end"
+      className="gap-5 grid md:grid-cols-6 md:grid-rows-2 pt-4 lg:pt-12 pb-4 lg:snap-end"
     >
       <Card image={TheTeam} alt="Cover Image" size="square" type="image" />
       <Card
@@ -56,7 +56,13 @@ const Team = () => {
             <br />
             <Text
               type="p"
+              text="A team with a discerning ear and a deep understanding of music's impact on mood. Meticulously craft playlists that cater to a variety of needs."
+              className="block lg:hidden"
+            />
+            <Text
+              type="p"
               text="A dedicated team with a discerning ear for calming melodies and a deep understanding of music's impact on mood. They meticulously craft playlists that cater to a variety of moods and needs."
+              className="hidden lg:block"
             />
           </div>
         }
@@ -73,7 +79,13 @@ const Team = () => {
             <br />
             <Text
               type="p"
+              text="Experts who ensure the music delivered in the highest quality, creating an immersive, restorative experience for optimal sound clarity."
+              className="block lg:hidden"
+            />
+            <Text
+              type="p"
               text="Experts who ensure the music on Serenity is delivered in the highest quality, creating an immersive and restorative listening experience. They fine-tune the audio for optimal sound clarity and user enjoyment."
+              className="hidden lg:block"
             />
           </div>
         }
@@ -90,7 +102,13 @@ const Team = () => {
             <br />
             <Text
               type="p"
+              text="Who craft a user-friendly and intuitive app that seamlessly integrates into your life. Prioritize enhance your journey towards serenity."
+              className="block lg:hidden"
+            />
+            <Text
+              type="p"
               text="Talented individuals who craft a user-friendly and intuitive app that seamlessly integrates into your life. They prioritize a smooth user experience to enhance your journey towards serenity."
+              className="hidden lg:block"
             />
           </div>
         }

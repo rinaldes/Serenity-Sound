@@ -4,7 +4,7 @@ import { Heading, Text } from "../typography";
 const Product = () => (
   <section
     id="product"
-    className="gap-5 grid md:grid-cols-6 md:grid-rows-2 pt-4 md:pt-12 pb-4 md:snap-end"
+    className="gap-5 grid md:grid-cols-6 md:grid-rows-2 pt-4 lg:pt-12 pb-4 lg:snap-end"
   >
     <Card image={Library2} alt="Cover Image" size="square" type="image" />
     <Card

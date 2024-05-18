@@ -40,7 +40,7 @@ const ModalProvider = (props: any) => {
                   <Heading type="h3" text="Any place do you like?" />
                   <Drawer onClose={onClose} />
                 </section>
-                <section className="flex flex-col gap-4 py-4">
+                <section className="flex flex-col gap-4 pt-4 pb-8">
                   <Heading type="h3" text="Perhaps you'd like to contact us?" />
                   <Link href="#">Contact Us </Link>
                 </section>
