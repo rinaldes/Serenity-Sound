@@ -4,7 +4,7 @@ import { Heading, Text } from "../typography";
 const History = () => (
   <section
     id="history"
-    className="gap-5 grid grid-cols-6 grid-rows-2 pt-12 pb-4 md:snap-end"
+    className="gap-5 grid md:grid-cols-6 md:grid-rows-2 pt-4 md:pt-12 pb-4 md:snap-end"
   >
     <Card
       alt="Cover Image"
@@ -16,7 +16,13 @@ const History = () => (
           <br />
           <Text
             type="p"
-            text="Serenity wasn't born in a boardroom; it stemmed from a shared passion for music's ability to soothe the soul. [Founders' Names], our founders, [briefly describe the inspiration behind creating Serenity - e.g.,  felt the need for a music platform dedicated to relaxation in our fast-paced world]."
+            text="Serenity wasn't born in a boardroom; it stemmed from a shared passion for music's ability to soothe the soul. Rindu, our founders, felt the need for a music platform dedicated to relaxation in our fast-paced world."
+            className="hidden md:block"
+          />
+          <Text
+            type="p"
+            text="Stemmed from a passion for music's ability to soothe the soul and the need for a platform to relaxation in our fast-paced world."
+            className="block md:hidden"
           />
         </div>
       }
@@ -27,10 +33,18 @@ const History = () => (
       size="rectangle"
       type="text"
       content={
-        <Text
-          type="p"
-          text="We started with a small collection of calming playlists, meticulously crafted to ease stress and promote peace. As our community grew, so did our vision. We assembled a team of music experts, audio specialists, and app developers, all driven by a common goal: to curate a sonic sanctuary for all."
-        />
+        <>
+          <Text
+            type="p"
+            text="We started with a small collection of calming playlists, meticulously crafted to ease stress and promote peace. As our community grew, so did our vision. We assembled a team of music experts, audio specialists, and app developers, all driven by a common goal: to curate a sonic sanctuary for all."
+            className="hidden md:block"
+          />
+          <Text
+            type="p"
+            text="Started from small, crafted playlists to ease stress and promote peace. As our community grew, we assembled a team of music experts, audio specialists, and app developers, driven by a goal to curate a sanctuary."
+            className="block md:hidden"
+          />
+        </>
       }
     />
     <Card

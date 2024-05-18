@@ -5,7 +5,7 @@ import { Heading, Text } from "../typography";
 const Culture = () => (
   <section
     id="about"
-    className="gap-5 grid grid-cols-6 grid-rows-2 pt-12 pb-4 md:snap-end"
+    className="gap-5 grid md:grid-cols-6 md:grid-rows-2 pt-4 md:pt-12 pb-4 md:snap-end"
   >
     <Card
       image={Library1}
@@ -19,6 +19,12 @@ const Culture = () => (
           <Text
             type="p"
             text="At Serenity, we believe that a peaceful work environment fosters a more mindful approach to creating a peaceful app. We prioritize the well-being of our team members, fostering a culture of:"
+            className="hidden md:block"
+          />
+          <Text
+            type="p"
+            text="We believe that a peaceful work environment fosters a more mindful approach to creating a peaceful app. "
+            className="block md:hidden"
           />
         </div>
       }
