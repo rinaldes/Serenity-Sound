@@ -29,6 +29,6 @@ Serenity Sound is a startup company founded by a team of passionate individuals 
 
 To visit the Serenity Sound page, follow these steps:
 
-1. Open your web browser and navigate to `http://localhost:3000`
+1. Open your web browser and navigate to `https://serenity-sound.vercel.app/`
 2. Explore the different sections of the page to learn more about Serenity Sound and its products
 3. Contact us using the provided contact form to inquire about purchasing or requesting a quote
