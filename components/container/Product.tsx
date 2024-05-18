@@ -44,7 +44,7 @@ const Product = () => (
           <Text type="p" text="High-fidelity audio quality" />
           <Text
             type="p"
-            className="hidden md:block"
+            className="hidden xl:block"
             text="Sleep timers and relaxation tools"
           />
         </div>

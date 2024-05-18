@@ -42,7 +42,7 @@ const TeamCard = (teamMember: any, image: StaticImageData) => {
             variant="2"
             content={
               <div className="flex flex-col h-full justify-start py-4 gap-6">
-                <div className="flex flex-row gap-4 items-center">
+                <div className="flex flex-row md:flex-col lg:flex-row gap-4 items-center md:text-center lg:text-left">
                   <Image alt="Cover Image" src={member.picture} size="smol" />
                   <div>
                     <Heading type="h4" text={member.name} />
@@ -55,7 +55,7 @@ const TeamCard = (teamMember: any, image: StaticImageData) => {
                 </div>
                 <Text
                   type="p"
-                  className="text-md text-center mx-2"
+                  className="text-md text-center mx-2 md:hidden lg:block"
                   text={member.quote}
                 />
               </div>
