@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { bodyFont } from "@/config/fonts";
 import { Aside, Navbar, Footer } from "@/components/layout";
+import { ModalProvider } from "@/contexts/Modal";
 
 export const metadata: Metadata = {
   title: {
@@ -27,20 +28,22 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
           <Aside />
         </div>
         <div className="w-full max-w-full md:w-11/12 md:max-w-11/12 md:pr-12 md:mb-16">
-          <main className="h-full max-w-full rounded-3xl">
-            <div
-              className="overflow-y-auto h-full md:snap-y md:snap-mandatory"
-              style={{ scrollbarWidth: "none" }}
-            >
-              <div className="flex flex-col">
-                <Navbar />
-                <div className="px-6">{children}</div>
+          <ModalProvider>
+            <main className="h-full max-w-full rounded-3xl">
+              <div
+                className="overflow-y-auto h-full md:snap-y md:snap-mandatory"
+                style={{ scrollbarWidth: "none" }}
+              >
+                <div className="flex flex-col">
+                  <Navbar />
+                  <div className="px-6">{children}</div>
+                </div>
               </div>
+            </main>
+            <div className="w-full pl-4 pr-8 hidden md:block">
+              <Footer />
             </div>
-          </main>
-          <div className="w-full pl-4 pr-8 hidden md:block">
-            <Footer />
-          </div>
+          </ModalProvider>
         </div>
       </div>
     </body>
