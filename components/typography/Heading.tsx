@@ -19,7 +19,7 @@ const Heading = ({ type, text, className }: HeadingProps) => {
     case "h2":
       return (
         <h2
-          className={`${titleFont.variable} font-bold font-title text-3xl ${className}`}
+          className={`${titleFont.variable} font-bold font-title text-xl lg:text-3xl ${className}`}
         >
           {text}
         </h2>

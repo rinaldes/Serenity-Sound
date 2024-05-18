@@ -4,7 +4,7 @@ import { Heading, Text } from "../typography";
 const Product = () => (
   <section
     id="product"
-    className="gap-5 grid grid-cols-6 grid-rows-2 pt-12 pb-4 snap-end"
+    className="gap-5 grid md:grid-cols-6 md:grid-rows-2 pt-4 lg:pt-12 pb-4 lg:snap-end"
   >
     <Card image={Library2} alt="Cover Image" size="square" type="image" />
     <Card
@@ -18,7 +18,12 @@ const Product = () => (
           <br />
           <Text
             type="p"
-            text="Serenity is the music streaming app designed to help you unwind, de-stress, and find moments of peace in your day.  Our curated playlists are meticulously crafted by music experts to soothe your soul and elevate your mood."
+            text="Serenity is the music streaming app designed to help you unwind, de-stress, and find moments of peace in your day."
+          />
+          <Text
+            className="hidden md:block"
+            type="p"
+            text="Our curated playlists are meticulously crafted by music experts to soothe your soul and elevate your mood."
           />
         </div>
       }
@@ -37,7 +42,11 @@ const Product = () => (
           />
           <Text type="p" text="Vast library of calming music" />
           <Text type="p" text="High-fidelity audio quality" />
-          <Text type="p" text="Sleep timers and relaxation tools" />
+          <Text
+            type="p"
+            className="hidden xl:block"
+            text="Sleep timers and relaxation tools"
+          />
         </div>
       }
     />

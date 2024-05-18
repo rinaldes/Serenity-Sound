@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { bodyFont } from "@/config/fonts";
 import { Aside, Navbar, Footer } from "@/components/layout";
+import { ModalProvider } from "@/contexts/Modal";
 
 export const metadata: Metadata = {
   title: {
@@ -22,25 +23,27 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en" suppressHydrationWarning>
     <body className={`${bodyFont.variable} font-body bg-white-lavender`}>
-      <div className="flex h-screen">
-        <div className="w-1/12 flex-row">
+      <div className="flex h-screen w-screen">
+        <div className="hidden lg:block lg:w-1/12 flex-row">
           <Aside />
         </div>
-        <div className="w-11/12 max-w-11/12 pr-12 mb-16">
-          <main className="h-full max-w-full rounded-3xl">
-            <div
-              className="overflow-y-auto h-full snap-y snap-mandatory"
-              style={{ scrollbarWidth: "none" }}
-            >
-              <div className="flex flex-col">
-                <Navbar />
-                <div className="px-6">{children}</div>
+        <div className="w-full max-w-full lg:w-11/12 lg:max-w-11/12 lg:pr-12 md:mb-8 lg:mb-16">
+          <ModalProvider>
+            <main className="h-full max-w-full rounded-3xl">
+              <div
+                className="overflow-y-auto h-full md:snap-y md:snap-mandatory"
+                style={{ scrollbarWidth: "none" }}
+              >
+                <div className="flex flex-col">
+                  <Navbar />
+                  <div className="px-6">{children}</div>
+                </div>
               </div>
+            </main>
+            <div className="w-full pl-4 pr-8 hidden lg:block">
+              <Footer />
             </div>
-          </main>
-          <div className="w-full pl-4 pr-8">
-            <Footer />
-          </div>
+          </ModalProvider>
         </div>
       </div>
     </body>

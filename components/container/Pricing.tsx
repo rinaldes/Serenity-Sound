@@ -4,7 +4,7 @@ import { Heading, Text } from "@/components/typography";
 const Pricing = () => (
   <section
     id="product"
-    className="gap-5 grid grid-cols-6 grid-rows-2 pt-12 pb-4 snap-end"
+    className="gap-5 grid md:grid-cols-6 md:grid-rows-2 pt-4 lg:pt-12 pb-4 lg:snap-end"
   >
     <Card image={Subscribe} alt="Cover Image" size="square" type="image" />
     <Card
@@ -16,9 +16,19 @@ const Pricing = () => (
           <Heading
             type="h3"
             text="Ready to Start Your Journey Toward Serenity?"
+            className="hidden md:block"
+          />
+          <Heading
+            type="h3"
+            text="Start Your Journey Toward Serenity"
+            className="block md:hidden"
           />
           <br />
-          <Text type="p" text="Choose a plan that best fits your needs." />
+          <Text
+            type="p"
+            text="Choose a plan that best fits your needs."
+            className="hidden md:block"
+          />
           <Text
             type="p"
             text="Don't worry, you can change your plan at any time."
@@ -33,7 +43,7 @@ const Pricing = () => (
       size="rectangle"
       type="text"
       content={
-        <div>
+        <div className="text-center md:text-left flex flex-col items-center md:items-start">
           <Heading type="h2" text="Serenity Breathe" />
           <br />
           <Text
@@ -50,7 +60,7 @@ const Pricing = () => (
       size="rectangle"
       type="text"
       content={
-        <div>
+        <div className="text-center md:text-left flex flex-col items-center md:items-start">
           <Heading type="h2" text="Serenity Unwind" />
           <br />
           <Text

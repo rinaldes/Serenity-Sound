@@ -58,12 +58,13 @@ const Review = () => {
   return (
     <section
       id="review"
-      className="gap-x-5 grid grid-cols-6 grid-rows-2 pt-12 snap-end"
+      className="gap-x-6 grid md:grid-cols-6 grid-rows-2 pt-2lg:pt-12 lg:snap-end"
     >
       <Card
         alt="Cover Image"
         size="width"
         type="text"
+        className="hidden md:block text-center"
         content={
           <div>
             <Heading
@@ -76,7 +77,7 @@ const Review = () => {
         }
       />
       <Card image={Library1} alt="Cover Image" size="square" type="image" />
-      <article className="w-[400%] col-span-6 overflow-hidden auto-scroll">
+      <article className="w-[1200%] md:w-[600%] lg:w-[400%] md:col-span-6 overflow-hidden auto-scroll">
         <div className="w-[100%] grid grid-cols-8 gap-8 pb-4">{userReview}</div>
       </article>
     </section>

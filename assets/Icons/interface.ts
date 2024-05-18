@@ -8,6 +8,8 @@ import {
   InstagramLogo,
   EnvelopeSimple,
   LinkedinLogo,
+  List,
+  X,
 } from "@phosphor-icons/react/dist/ssr";
 
 export interface pageProps {
@@ -33,3 +35,5 @@ export const iconSocialMap = {
   Linkedin: LinkedinLogo,
   Email: EnvelopeSimple,
 };
+
+export { List, X };

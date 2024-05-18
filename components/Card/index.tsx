@@ -9,6 +9,7 @@ interface CardProps {
   image?: StaticImageData;
   content?: JSX.Element;
   variant?: string;
+  className?: string;
 }
 
 const CardComponent = ({
@@ -18,6 +19,7 @@ const CardComponent = ({
   type,
   content,
   variant = "1",
+  className = "",
 }: CardProps) => {
   const Card = {
     cover: CoverCard,
@@ -27,10 +29,10 @@ const CardComponent = ({
   }[type];
 
   const cardSize = {
-    cover: "col-span-6 h-[35.25rem]",
-    width: "col-span-4 h-[16.15rem]",
-    rectangle: "col-span-3 h-[16.15rem]",
-    square: "col-span-2 h-[16.15rem]",
+    cover: "md:col-span-6 h-[35.25rem]",
+    width: "md:col-span-4 h-[16.15rem]",
+    rectangle: "md:col-span-3 h-[16.15rem]",
+    square: "md:col-span-2 h-[16.15rem]",
   }[size];
   return (
     <Card
@@ -39,6 +41,7 @@ const CardComponent = ({
       image={image ?? dummyImage}
       content={content}
       variant={variant}
+      className={className}
     />
   );
 };

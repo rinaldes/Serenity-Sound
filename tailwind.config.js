@@ -7,6 +7,7 @@ module.exports = {
     "./assets/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./config/**/*.{js,ts,jsx,tsx,mdx}",
+    "./contexts/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
