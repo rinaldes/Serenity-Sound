@@ -1,3 +1,4 @@
+"use client";
 import {
   Navbar,
   NavbarBrand,
@@ -7,12 +8,21 @@ import {
 import Link from "next/link";
 import Logo from "@/assets/Logo";
 import { siteConfig } from "@/config/site";
+import { motion } from "framer-motion";
 
 const link = siteConfig.navItems.map(({ href, label }) => (
   <NavbarItem key={label}>
-    <Link color="foreground" href={href} scroll={false}>
-      {label}
-    </Link>
+    <motion.div
+      whileHover={{
+        scale: 1.1,
+      }}
+      transition={{ duration: 0.25 }}
+      className="px-4 pt-2 pb-3 rounded-xl hover:bg-lavender hover:text-white"
+    >
+      <Link color="foreground" href={href} scroll={false}>
+        {label}
+      </Link>
+    </motion.div>
   </NavbarItem>
 ));
 
@@ -21,7 +31,7 @@ const Nav = () => (
     <NavbarBrand>
       <Logo />
     </NavbarBrand>
-    <NavbarContent className="font-body hidden sm:flex gap-12" justify="end">
+    <NavbarContent className="font-body hidden sm:flex gap-6" justify="end">
       {link}
     </NavbarContent>
   </Navbar>

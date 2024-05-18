@@ -1,6 +1,7 @@
+"use client";
 import { Button } from "@nextui-org/button";
+import { motion } from "framer-motion";
 import Link from "next/link";
-import { type } from "os";
 
 interface ButtonProps {
   text: string;
@@ -9,9 +10,15 @@ interface ButtonProps {
 }
 
 const ButtonComponent = ({ url, text, type = "secondary" }: ButtonProps) => (
-  <Button href={url} as={Link} color={type} variant="solid">
-    {text}
-  </Button>
+  <motion.div
+    whileHover={{ scale: 1.15 }}
+    whileTap={{ scale: 0.9 }}
+    className="w-fit h-fit"
+  >
+    <Button href={url} as={Link} color={type} variant="solid">
+      {text}
+    </Button>
+  </motion.div>
 );
 
 export default ButtonComponent;

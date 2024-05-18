@@ -47,7 +47,7 @@ const Product = () => (
       size="square"
       type="text"
       content={
-        <div className="text-center">
+        <div className="flex flex-col text-center items-center">
           <Heading type="h3" text="Get Your Journey with Serenity Now" />
           <br />
           <Button url="/services#plan" text="Choose Your Plan" />

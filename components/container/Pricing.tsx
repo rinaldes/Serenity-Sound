@@ -12,7 +12,7 @@ const Pricing = () => (
       size="width"
       type="text"
       content={
-        <div className="text-center">
+        <div className="text-center flex flex-col items-center ">
           <Heading
             type="h3"
             text="Ready to Start Your Journey Toward Serenity?"
