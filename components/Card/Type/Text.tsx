@@ -3,10 +3,11 @@ import { Card, CardFooter } from "@nextui-org/card";
 interface CardProps {
   cardSize: string;
   content?: JSX.Element;
+  className?: string;
 }
 
-const TextCard = ({ cardSize, content }: CardProps) => (
-  <Card className={cardSize} isFooterBlurred>
+const TextCard = ({ cardSize, content, className }: CardProps) => (
+  <Card className={cardSize + " " + className} isFooterBlurred>
     <CardFooter className="px-8 absolute z-10 w-full h-full flex items-center justify-center bg-white">
       {content}
     </CardFooter>

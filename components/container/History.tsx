@@ -4,7 +4,7 @@ import { Heading, Text } from "../typography";
 const History = () => (
   <section
     id="history"
-    className="gap-5 grid grid-cols-6 grid-rows-2 pt-12 pb-4 snap-end"
+    className="gap-5 grid grid-cols-6 grid-rows-2 pt-12 pb-4 md:snap-end"
   >
     <Card
       alt="Cover Image"

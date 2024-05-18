@@ -5,7 +5,7 @@ import { Heading, Text } from "@/components/typography";
 const Team = () => (
   <section
     id="team"
-    className="gap-5 grid grid-cols-6 grid-rows-2 pt-12 pb-4 snap-end"
+    className="gap-5 grid md:grid-cols-6 md:grid-rows-2 pt-4 md:pt-12 pb-4 md:snap-end"
   >
     <Card image={TheTeam} alt="Cover Image" size="square" type="image" />
     <Card
@@ -32,6 +32,7 @@ const Team = () => (
       alt="Cover Image"
       size="square"
       type="combination"
+      className="hidden md:block"
       content={
         <div>
           <Heading type="h3" text="Music Curator" />
@@ -48,6 +49,7 @@ const Team = () => (
       alt="Cover Image"
       size="square"
       type="combination"
+      className="hidden md:block"
       content={
         <div>
           <Heading type="h3" text="Audio Specialists" />
@@ -64,6 +66,7 @@ const Team = () => (
       alt="Cover Image"
       size="square"
       type="combination"
+      className="hidden md:block"
       content={
         <div>
           <Heading type="h3" text="App Developer" />

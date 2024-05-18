@@ -58,7 +58,7 @@ const Review = () => {
   return (
     <section
       id="review"
-      className="gap-x-5 grid grid-cols-6 grid-rows-2 pt-12 snap-end"
+      className="gap-x-5 grid grid-cols-6 grid-rows-2 pt-12 md:snap-end"
     >
       <Card
         alt="Cover Image"

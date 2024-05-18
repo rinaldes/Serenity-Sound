@@ -4,7 +4,7 @@ import { Heading, Text } from "@/components/typography";
 const Pricing = () => (
   <section
     id="product"
-    className="gap-5 grid grid-cols-6 grid-rows-2 pt-12 pb-4 snap-end"
+    className="gap-5 grid grid-cols-6 grid-rows-2 pt-12 pb-4 md:snap-end"
   >
     <Card image={Subscribe} alt="Cover Image" size="square" type="image" />
     <Card

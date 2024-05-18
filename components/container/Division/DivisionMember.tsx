@@ -77,7 +77,7 @@ const DivisionMember = ({ division, image, desc }: DivisionMemberProps) => {
   return (
     <section
       id="team"
-      className="gap-5 grid grid-cols-6 grid-rows-2 pt-12 pb-4 snap-end"
+      className="gap-5 grid md:grid-cols-6 md:grid-rows-2 pt-4 md:pt-12 pb-4 md:snap-end"
     >
       <Card image={image} alt="Cover Image" size="square" type="image" />
       <Card

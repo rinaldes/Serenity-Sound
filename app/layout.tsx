@@ -22,14 +22,14 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en" suppressHydrationWarning>
     <body className={`${bodyFont.variable} font-body bg-white-lavender`}>
-      <div className="flex h-screen">
-        <div className="w-1/12 flex-row">
+      <div className="flex h-screen w-screen">
+        <div className="hidden md:block md:w-1/12 flex-row">
           <Aside />
         </div>
-        <div className="w-11/12 max-w-11/12 pr-12 mb-16">
+        <div className="w-full max-w-full md:w-11/12 md:max-w-11/12 md:pr-12 md:mb-16">
           <main className="h-full max-w-full rounded-3xl">
             <div
-              className="overflow-y-auto h-full snap-y snap-mandatory"
+              className="overflow-y-auto h-full md:snap-y md:snap-mandatory"
               style={{ scrollbarWidth: "none" }}
             >
               <div className="flex flex-col">
@@ -38,7 +38,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
               </div>
             </div>
           </main>
-          <div className="w-full pl-4 pr-8">
+          <div className="w-full pl-4 pr-8 hidden md:block">
             <Footer />
           </div>
         </div>

@@ -8,6 +8,7 @@ interface CardProps {
   image: StaticImageData;
   content?: JSX.Element;
   variant?: string;
+  className?: string;
 }
 
 const CombinationCardVariant1 = ({
@@ -15,8 +16,9 @@ const CombinationCardVariant1 = ({
   alt,
   image,
   content,
+  className = "",
 }: CardProps) => (
-  <Card className={cardSize} isFooterBlurred>
+  <Card className={cardSize + " " + className} isFooterBlurred>
     <Image alt={alt} className="z-0 w-full h-full object-cover" src={image} />
     <CardFooter className="text-tiny justify-between mb-1 before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_24px)] shadow-small ml-3 z-10">
       {content}
@@ -29,8 +31,9 @@ const CombinationCardVariant2 = ({
   alt,
   image,
   content,
+  className = "",
 }: CardProps) => (
-  <Card className={cardSize} isFooterBlurred>
+  <Card className={cardSize + " " + className} isFooterBlurred>
     <Image alt={alt} className="z-0 w-full h-full object-cover" src={image} />
     <CardFooter className="text-tiny justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute bottom-3 left-3 h-[calc(100%_-_24px)] before:rounded-xl rounded-large w-[calc(100%_-_24px)] shadow-small z-10">
       {content}
@@ -44,9 +47,10 @@ const CombinationCard = ({
   image,
   content,
   variant = "1",
+  className = "",
 }: CardProps) =>
   variant === "1"
-    ? CombinationCardVariant1({ cardSize, alt, image, content })
-    : CombinationCardVariant2({ cardSize, alt, image, content });
+    ? CombinationCardVariant1({ cardSize, alt, image, content, className })
+    : CombinationCardVariant2({ cardSize, alt, image, content, className });
 
 export default CombinationCard;

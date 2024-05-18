@@ -27,11 +27,11 @@ const link = siteConfig.navItems.map(({ href, label }) => (
 ));
 
 const Nav = () => (
-  <Navbar className="py-4 bg-white-lavender" maxWidth="full">
-    <NavbarBrand>
+  <Navbar className="md:py-4 bg-white-lavender" maxWidth="full">
+    <NavbarBrand className="flex flex-col item-center md:items-start">
       <Logo />
     </NavbarBrand>
-    <NavbarContent className="font-body hidden sm:flex gap-6" justify="end">
+    <NavbarContent className="font-body hidden md:flex gap-6" justify="end">
       {link}
     </NavbarContent>
   </Navbar>
