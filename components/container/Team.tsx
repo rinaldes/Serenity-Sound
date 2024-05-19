@@ -52,7 +52,7 @@ const Team = () => {
         className={pathname === "/teams" ? "hidden md:block" : ""}
         content={
           <div>
-            <Heading type="h3" text="Music Curator" />
+            <Heading type="h3" text="Music Curators" />
             <br />
             <Text
               type="p"
@@ -98,7 +98,7 @@ const Team = () => {
         className={pathname === "/teams" ? "hidden md:block" : ""}
         content={
           <div>
-            <Heading type="h3" text="App Developer" />
+            <Heading type="h3" text="App Developers" />
             <br />
             <Text
               type="p"

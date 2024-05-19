@@ -1,5 +1,5 @@
 import { Card } from "@/components";
-import { MusicShare, Studio, Library1, Image1 } from "@/assets/Images";
+import { MusicShare, Library1, Image1 } from "@/assets/Images";
 import Logo from "@/assets/Logo";
 import { Heading, Text } from "../typography";
 
@@ -9,7 +9,6 @@ const About = () => (
     className="gap-5 grid md:grid-cols-6 md:grid-rows-2 pt-4 lg:pt-12 pb-4 lg:snap-end"
   >
     <Card
-      image={Studio}
       alt="Cover Image"
       size="width"
       type="text"

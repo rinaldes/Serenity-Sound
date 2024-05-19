@@ -1,15 +1,14 @@
-import { reviews } from "@/config/reviews";
-const getRandomReview = () => {
+const getRandomReview = async () => {
+  const reviews = process.env.NEXT_PUBLIC_RANDOMIZER_API;
   const selectedReview: string[] = [];
 
-  for (let i = 0; i < 6; i++) {
-    const idx = Math.floor(Math.random() * reviews.length);
-    const reviewList = reviews[idx];
-    if (!selectedReview.includes(reviewList)) {
-      selectedReview.push(reviewList);
-    } else {
-      i--;
-    }
+  try {
+    const response = await fetch(`${reviews}/reviews`);
+    const data = await response.json();
+    const shuffledData = [...data].sort(() => 0.5 - Math.random());
+    selectedReview.push(...shuffledData.slice(0, 6));
+  } catch (error) {
+    console.error("Can't catch user data:", error);
   }
 
   return selectedReview;

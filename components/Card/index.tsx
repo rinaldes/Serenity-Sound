@@ -1,6 +1,5 @@
 import { StaticImageData } from "next/image";
 import { CombinationCard, CoverCard, TextCard, ImageCard } from "./Type";
-import { dummyImage } from "@/assets/Images";
 
 interface CardProps {
   type: "cover" | "text" | "combination" | "image";
@@ -38,7 +37,7 @@ const CardComponent = ({
     <Card
       cardSize={cardSize}
       alt={alt}
-      image={image ?? dummyImage}
+      image={image!}
       content={content}
       variant={variant}
       className={className}

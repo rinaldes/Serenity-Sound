@@ -14,8 +14,8 @@ const getReviewData = async () => {
 
   try {
     const userData = await getUserData(6);
-    const userJob = getRandomProfession();
-    const userReview = getRandomReview();
+    const userJob = await getRandomProfession();
+    const userReview = await getRandomReview();
 
     for (let i = 0; i < userData.results.length; i++) {
       userReviewData.push({
