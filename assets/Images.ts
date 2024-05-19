@@ -13,8 +13,8 @@ const rawTheTeam = `${cdnEnhance}/Serenity/p0tof3wa77wxeq4adjyd.jpg`;
 const rawMusicShare = `${cdnEnhance}/Serenity/q6fnewnmfqvoq6pzkp7z.jpg`;
 const rawWalking = `${cdnEnhance}/Serenity/rlkd9ldfuhwg3s1naw9k.jpg`;
 const rawSubscribe = `${cdnEnhance}/Serenity/motytlv8ar0gofxme99p.jpg`;
-const rawSerenityLogo = `${cdn}/e_improve:outdoor/Serenity/zuehemfwgnjitliavvpf.jpg`;
-const rawSerenityLogoBig = `${cdn}/e_improve:outdoor/Serenity/qdx0tz6myaesmso1howm.jpg`;
+const rawSerenityLogo = `${cdn}/f_webp/e_improve:outdoor/Serenity/zuehemfwgnjitliavvpf.jpg`;
+const rawSerenityLogoBig = `${cdn}/f_webp/e_improve:outdoor/Serenity/qdx0tz6myaesmso1howm.jpg`;
 
 /* 
 TODO : Change the size of the image

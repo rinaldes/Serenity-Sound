@@ -27,11 +27,11 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
         <div className="hidden lg:block lg:w-1/12 flex-row">
           <Aside />
         </div>
-        <div className="w-full max-w-full lg:w-11/12 lg:max-w-11/12 lg:pr-12 md:mb-8 lg:mb-16">
+        <div className="w-full max-w-full lg:w-5/6 md:mb-8 lg:mb-10">
           <ModalProvider>
             <main className="h-full max-w-full rounded-3xl">
               <div
-                className="overflow-y-auto h-full md:snap-y md:snap-mandatory"
+                className="overflow-y-auto h-full"
                 style={{ scrollbarWidth: "none" }}
               >
                 <div className="flex flex-col">

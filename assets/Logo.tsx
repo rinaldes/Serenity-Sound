@@ -13,6 +13,7 @@ const Logo = ({ type, variant }: LogoProps) => (
       src={type === "large" ? SerenityLogoBig : SerenityLogo}
       alt="Serenity Logo"
       size={type}
+      className="mix-blend-multiply"
     />
     <span
       className={`${titleFont.variable} font-title font-semibold text-black ${

@@ -34,7 +34,7 @@ const Nav = () => {
   const { onOpen } = useContext(ModalContext);
 
   return (
-    <Navbar className="md:py-4 bg-white-lavender" maxWidth="full">
+    <Navbar className="md:pt-2 bg-white-lavender" maxWidth="full">
       <NavbarBrand>
         <Logo />
       </NavbarBrand>
