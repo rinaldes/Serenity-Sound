@@ -67,10 +67,7 @@ const ModalProvider = (props: any) => {
                       <Drawer onClose={onClose} />
                     </section>
                     <section className="flex flex-col gap-4 pt-4 pb-8">
-                      <Heading
-                        type="h3"
-                        text="Perhaps you'd like to tell us something?"
-                      />
+                      <Heading type="h3" text="Perhaps contacting us?" />
                       <Link href="#" onClick={() => openContact()}>
                         Contact Us
                       </Link>
@@ -78,7 +75,7 @@ const ModalProvider = (props: any) => {
                   </>
                 ) : drawerContent === "Contact" ? (
                   <section className="flex flex-col gap-8 py-8 px-4">
-                    <Heading type="h3" text="Have something to tell us?" />
+                    <Heading type="h3" text="Something to tell us?" />
                     <Contact onClose={sendMessage} />
                   </section>
                 ) : (
