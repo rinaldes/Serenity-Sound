@@ -1,6 +1,5 @@
 import { StaticImageData } from "next/image";
 import getUserData from "./getUserData";
-import { appDevelopers, audioSpecialists, musicCurators } from "@/config/teams";
 
 interface TeamData {
   name: string;
@@ -11,14 +10,25 @@ interface TeamData {
 }
 
 const getTeamData = async (division: string) => {
+  const teams = process.env.NEXT_PUBLIC_RANDOMIZER_API;
+
   const teamData: TeamData[] = [];
-  const teamBackground =
-    division === "Audio Specialists"
-      ? audioSpecialists
-      : division === "Music Curator"
-      ? musicCurators
-      : appDevelopers;
-  console.log(teamBackground);
+  let teamBackground;
+  switch (division) {
+    case "Audio Specialists":
+      const response = await fetch(`${teams}/audioSpecialists`);
+      teamBackground = await response.json();
+      break;
+    case "Music Curators":
+      const response1 = await fetch(`${teams}/musicCurators`);
+      teamBackground = await response1.json();
+      break;
+    case "App Developers":
+      const response2 = await fetch(`${teams}/appDevelopers`);
+      teamBackground = await response2.json();
+      break;
+  }
+
   try {
     const userData = await getUserData(
       3,

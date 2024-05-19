@@ -7,6 +7,7 @@ interface ImageProps {
   className?: string;
   size?: "large" | "small" | "smol";
   isZoomable?: boolean;
+  priority?: boolean;
 }
 const ImageComponent = ({
   src,
@@ -14,6 +15,7 @@ const ImageComponent = ({
   className,
   size,
   isZoomable = true,
+  priority = false,
 }: ImageProps) => (
   <Image
     as={NextImage}
@@ -35,6 +37,7 @@ const ImageComponent = ({
     src={src.src}
     className={className}
     removeWrapper
+    priority={priority}
     isZoomed={isZoomable}
     fallbackSrc={`https://via.placeholder.com/${src.width}x${src.height}`}
   />
