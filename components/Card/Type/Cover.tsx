@@ -20,6 +20,7 @@ const CoverCard = ({ cardSize, alt, image, className = "" }: CardProps) => (
       className="z-0 w-full h-full object-cover"
       src={image}
       isZoomable={false}
+      priority={true}
     />
   </Card>
 );
