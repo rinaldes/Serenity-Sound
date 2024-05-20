@@ -6,6 +6,10 @@
   animation: scroll 40s linear infinite;
 }
 
+.auto-scroll:hover {
+  animation-play-state: paused;
+}
+
 .auto-scroll-fastest {
   animation: scrollLong 4.5s linear infinite alternate-reverse;
 }

@@ -23,6 +23,7 @@ module.exports = {
         "pale-yellow": "#fff0c7",
         "light-green": "#c2f0f0",
         "soft-blue": "#b2d7ff",
+        scrollShadow: "#FF0000",
       },
       fontFamily: {
         body: ["var(--font-body)"],

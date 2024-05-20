@@ -1,10 +1,12 @@
+"use client";
 import { Card } from "@/components";
 import { Text, Heading } from "@/components/typography";
 import { Avatar } from "@nextui-org/avatar";
+import { motion } from "framer-motion";
 
 const ReviewCard = (userReview: any) =>
   userReview.map((result: any, index: number) => (
-    <div key={index}>
+    <motion.div key={index} whileHover={{ scale: 1.05 }}>
       <Card
         key={index}
         alt="Cover Image"
@@ -24,7 +26,7 @@ const ReviewCard = (userReview: any) =>
           </article>
         }
       />
-    </div>
+    </motion.div>
   ));
 
 export default ReviewCard;

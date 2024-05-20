@@ -2,6 +2,7 @@ const cdn = process.env.NEXT_PUBLIC_CDN_API;
 const cdnEnhance = cdn + "/e_enhance";
 
 const rawCoverImage = `${cdnEnhance}/e_gen_restore/f_auto/Serenity/ankrqsdcl9dlyiwo4wed.jpg`;
+const rawCoverMobile = `${cdnEnhance}/e_gen_restore/ar_1:2,c_auto,g_auto,h_1.00/f_auto/Serenity/ankrqsdcl9dlyiwo4wed.jpg`;
 const rawLibrary1 = `${cdnEnhance}/f_auto/Serenity/pcb3ivpv7fz49ve0ekfy.jpg`;
 const rawLibrary2 = `${cdnEnhance}/f_auto/Serenity/uxrvxhq6sa97mglgl7kh.jpg`;
 const rawImage1 = `${cdnEnhance}/f_auto/Serenity/gjp9zfphuopcgweu9gxs.jpg`;
@@ -23,6 +24,12 @@ TODO : Change the size of the image
 export const CoverImage = {
   src: rawCoverImage,
   width: 1344,
+  height: 768,
+};
+
+export const CoverMobile = {
+  src: rawCoverMobile,
+  width: 380,
   height: 768,
 };
 
