@@ -53,7 +53,7 @@ const Product = () => (
           />
           <Text
             type="p"
-            className="hidden xl:block auto-scroll-fast text-nowrap text-xl"
+            className="hidden xl:block auto-scroll-fasting text-nowrap text-xl"
             text="Sleep timers and relaxation tools"
           />
         </div>
