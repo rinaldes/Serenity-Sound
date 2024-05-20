@@ -4,6 +4,7 @@ import { siteConfig } from "@/config/site";
 import { bodyFont } from "@/config/fonts";
 import { Aside, Navbar, Footer } from "@/components/layout";
 import { ModalProvider } from "@/contexts/Modal";
+import { ScrollShadow } from "@nextui-org/scroll-shadow";
 
 export const metadata: Metadata = {
   title: {
@@ -28,18 +29,18 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
       <div className="hidden lg:block lg:w-1/12">
         <Aside type="page" />
       </div>
-      <div className="w-full lg:w-5/6">
+      <div className="w-full lg:w-5/6 overflow-hidden">
         <ModalProvider>
-          <main
-            className="overflow-y-auto h-full"
+          <Navbar />
+          <ScrollShadow
+            className="overflow-y-auto h-[87.5vh]"
             style={{ scrollbarWidth: "none" }}
           >
             <div className="flex flex-col overflow-x-hidden">
-              <Navbar />
               <div className="px-6">{children}</div>
               <Footer />
             </div>
-          </main>
+          </ScrollShadow>
         </ModalProvider>
       </div>
       <div className="hidden lg:block lg:w-1/12">

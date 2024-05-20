@@ -662,6 +662,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nextui-org/scroll-shadow@npm:^2.1.16":
+  version: 2.1.16
+  resolution: "@nextui-org/scroll-shadow@npm:2.1.16"
+  dependencies:
+    "@nextui-org/react-utils": "npm:2.0.13"
+    "@nextui-org/shared-utils": "npm:2.0.5"
+    "@nextui-org/use-data-scroll-overflow": "npm:2.1.4"
+  peerDependencies:
+    "@nextui-org/system": ">=2.0.0"
+    "@nextui-org/theme": ">=2.1.0"
+    react: ">=18"
+    react-dom: ">=18"
+  checksum: 10c0/531e594676c9f953c0a6d70c968b5e5f6156a1873fb7f49c3e89af4176a02c2b5fc1349aa031f44104f2f8739581ffacb05510b82b7593aeea8d1fe90033b272
+  languageName: node
+  linkType: hard
+
 "@nextui-org/shared-icons@npm:2.0.7":
   version: 2.0.7
   resolution: "@nextui-org/shared-icons@npm:2.0.7"
@@ -922,6 +938,17 @@ __metadata:
   peerDependencies:
     react: ">=18"
   checksum: 10c0/93d9f4b0713cf5a5f8edbde88a0417cee69f6a35a27a8ce9cc8428f305084c7a7a10db9026e337ca92931f0da4316586a05f96a80c323a64c8115ff19d0e044c
+  languageName: node
+  linkType: hard
+
+"@nextui-org/use-data-scroll-overflow@npm:2.1.4":
+  version: 2.1.4
+  resolution: "@nextui-org/use-data-scroll-overflow@npm:2.1.4"
+  dependencies:
+    "@nextui-org/shared-utils": "npm:2.0.5"
+  peerDependencies:
+    react: ">=18"
+  checksum: 10c0/8c74d8aa6604e5b4aa2ab0134c3df8e498b53f8d9cdea980cda5ad1937c4518f1eded0a98ae4d398418ad74c6ff3c16b0db07f404d8edc0db991e3918bda0f29
   languageName: node
   linkType: hard
 
@@ -4113,6 +4140,7 @@ __metadata:
     "@nextui-org/link": "npm:^2.0.29"
     "@nextui-org/modal": "npm:^2.0.33"
     "@nextui-org/navbar": "npm:^2.0.30"
+    "@nextui-org/scroll-shadow": "npm:^2.1.16"
     "@nextui-org/snippet": "npm:^2.0.35"
     "@nextui-org/switch": "npm:^2.0.28"
     "@nextui-org/system": "npm:2.1.0"
