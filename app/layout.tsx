@@ -25,16 +25,16 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
     <body
       className={`${bodyFont.variable} font-body bg-white-lavender flex h-screen w-screen`}
     >
-      <div className="hidden lg:block lg:w-1/12 flex-row">
+      <div className="hidden lg:block lg:w-1/12">
         <Aside type="page" />
       </div>
-      <div className="w-full max-w-full lg:w-5/6">
+      <div className="w-full lg:w-5/6">
         <ModalProvider>
           <main
-            className="overflow-y-auto h-full max-w-full"
+            className="overflow-y-auto h-full"
             style={{ scrollbarWidth: "none" }}
           >
-            <div className="flex flex-col">
+            <div className="flex flex-col overflow-x-hidden">
               <Navbar />
               <div className="px-6">{children}</div>
               <Footer />
@@ -42,7 +42,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
           </main>
         </ModalProvider>
       </div>
-      <div className="hidden lg:block lg:w-1/12 flex-row">
+      <div className="hidden lg:block lg:w-1/12">
         <Aside type="social" />
       </div>
     </body>
