@@ -1,9 +1,14 @@
 import { Card } from "@/components";
-import { CoverImage } from "@/assets/Images";
+import { CoverImage, CoverMobile } from "@/assets/Images";
 
 const Hero = () => (
-  <section id="home" className="gap-5 grid md:grid-cols-6 ">
-    <Card image={CoverImage} alt="Cover Image" size="cover" type="cover" />
+  <section id="home">
+    <article className="hidden md:block">
+      <Card image={CoverImage} alt="Cover Image" size="cover" type="cover" />
+    </article>
+    <article className="block md:hidden">
+      <Card image={CoverMobile} alt="Cover Image" size="cover" type="cover" />
+    </article>
   </section>
 );
 

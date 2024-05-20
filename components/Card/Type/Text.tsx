@@ -8,7 +8,7 @@ interface CardProps {
 
 const TextCard = ({ cardSize, content, className }: CardProps) => (
   <Card className={cardSize + " " + className} isFooterBlurred>
-    <CardFooter className="px-8 absolute z-10 w-full h-full flex items-center justify-center bg-white">
+    <CardFooter className=" hover:bg-gray-50 px-8 absolute z-10 w-full h-full flex items-center justify-center bg-white">
       {content}
     </CardFooter>
   </Card>

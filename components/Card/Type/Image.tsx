@@ -10,8 +10,8 @@ interface CardProps {
 }
 
 const ImageCard = ({ cardSize, alt, image, className }: CardProps) => (
-  <Card className={cardSize + " " + className}>
-    <Image alt={alt} className="z-0 w-full h-full object-cover" src={image} />
+  <Card className={cardSize + " hover:opacity-85 transition-all " + className}>
+    <Image alt={alt} className="z-0 w-full h-full object-cover " src={image} />
   </Card>
 );
 

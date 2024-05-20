@@ -40,7 +40,7 @@ const CardComponent = ({
       image={image!}
       content={content}
       variant={variant}
-      className={className}
+      className={`${className}`}
     />
   );
 };

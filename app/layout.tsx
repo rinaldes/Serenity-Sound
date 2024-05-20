@@ -33,8 +33,9 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
         <ModalProvider>
           <Navbar />
           <ScrollShadow
-            className="overflow-y-auto h-[87.5vh]"
+            className={`overflow-y-auto h-[88vh]`}
             style={{ scrollbarWidth: "none" }}
+            size={20}
           >
             <div className="flex flex-col overflow-x-hidden">
               <div className="px-6">{children}</div>
