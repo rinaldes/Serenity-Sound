@@ -3,8 +3,8 @@ import { Subscribe } from "@/assets/Images";
 import { Heading, Text } from "@/components/typography";
 const Pricing = () => (
   <section
-    id="product"
-    className="gap-5 grid md:grid-cols-6 md:grid-rows-2 pt-4  pb-4"
+    id="pricing"
+    className="gap-5 grid md:grid-cols-6 md:grid-rows-2 pt-8"
   >
     <Card image={Subscribe} alt="Cover Image" size="square" type="image" />
     <Card

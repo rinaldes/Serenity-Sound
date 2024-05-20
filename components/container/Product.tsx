@@ -4,7 +4,7 @@ import { Heading, Text } from "../typography";
 const Product = () => (
   <section
     id="product"
-    className="gap-5 grid md:grid-cols-6 md:grid-rows-2 pt-4  pb-4"
+    className="gap-5 grid md:grid-cols-6 md:grid-rows-2 pt-8"
   >
     <Card image={Library2} alt="Cover Image" size="square" type="image" />
     <Card
@@ -33,18 +33,27 @@ const Product = () => (
       size="square"
       type="text"
       content={
-        <div>
+        <div className="item-center text-center">
           <Heading type="h2" text="Serenity Music" />
           <br />
           <Text
             type="p"
             text="Personalized playlists for different moods and activities"
+            className="auto-scroll-faster text-nowrap text-lg"
           />
-          <Text type="p" text="Vast library of calming music" />
-          <Text type="p" text="High-fidelity audio quality" />
           <Text
             type="p"
-            className="hidden xl:block"
+            text="Vast library of calming music"
+            className="auto-scroll-fast text-nowrap text-xl"
+          />
+          <Text
+            type="p"
+            text="High-fidelity audio quality"
+            className="auto-scroll-fastest text-nowrap text-md"
+          />
+          <Text
+            type="p"
+            className="hidden xl:block auto-scroll-fast text-nowrap text-xl"
             text="Sleep timers and relaxation tools"
           />
         </div>
@@ -59,7 +68,7 @@ const Product = () => (
         <div className="flex flex-col text-center items-center">
           <Heading type="h3" text="Get Your Journey with Serenity Now" />
           <br />
-          <Button url="/services#plan" text="Choose Your Plan" />
+          <Button url="/services#pricing" text="Choose Your Plan" />
         </div>
       }
     />
