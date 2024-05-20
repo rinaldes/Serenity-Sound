@@ -34,4 +34,21 @@ export const siteConfig = {
     { href: "#product", icon: "Service" },
     { href: "#review", icon: "Review" },
   ],
+  aboutLinks: [
+    { href: "#company", icon: "About" },
+    { href: "#history", icon: "History" },
+    { href: "#team", icon: "Team" },
+    { href: "#culture", icon: "Culture" },
+  ],
+  teamsLinks: [
+    { href: "#team", icon: "Team" },
+    { href: "#music_curator", icon: "Music Curator" },
+    { href: "#audio_spesialist", icon: "Audio Spesialist" },
+    { href: "#app_developer", icon: "App Developer" },
+  ],
+  servicesLinks: [
+    { href: "#product", icon: "Service" },
+    { href: "#review", icon: "Review" },
+    { href: "#pricing", icon: "Pricing" },
+  ],
 };
