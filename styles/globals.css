@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.auto-scroll {
+  animation: scroll 40s linear infinite;
+}
+
+.auto-scroll-fastest {
+  animation: scrollLong 4.5s linear infinite;
+}
+
+.auto-scroll-faster {
+  animation: scrollLong 6s linear infinite;
+}
+
+.auto-scroll-fast {
+  animation: scrollLong 7s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-75.55%);
+  }
+}
+
+@keyframes scrollLong {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

@@ -4,8 +4,8 @@ import { Heading, Text } from "../typography";
 
 const Culture = () => (
   <section
-    id="about"
-    className="gap-5 grid md:grid-cols-6 md:grid-rows-2 pt-4  pb-4"
+    id="culture"
+    className="gap-5 grid md:grid-cols-6 md:grid-rows-2 pt-8"
   >
     <Card
       image={Library1}

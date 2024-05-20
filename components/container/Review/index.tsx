@@ -6,7 +6,6 @@ import { Heading } from "@/components/typography";
 import { Library1 } from "@/assets/Images";
 import { Avatar, AvatarGroup } from "@nextui-org/avatar";
 import { getReview, getThumbnail } from "@/utils";
-import "./review.css";
 import ReviewCard from "./ReviewCard";
 
 const fetchTheReviewer = async () => {
@@ -58,7 +57,7 @@ const Review = () => {
   return (
     <section
       id="review"
-      className="gap-x-6 grid md:grid-cols-6 grid-rows-2 pt-2 "
+      className="gap-x-6 grid md:grid-cols-6 grid-rows-2 pt-8 "
     >
       <Card
         alt="Cover Image"

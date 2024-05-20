@@ -10,10 +10,28 @@ import {
   LinkedinLogo,
   List,
   X,
+  Clock,
+  UsersThree,
+  UserSound,
+  ComputerTower,
+  Headphones,
+  PianoKeys,
+  CreditCard,
 } from "@phosphor-icons/react/dist/ssr";
 
 export interface pageProps {
-  name: "Home" | "About" | "Review" | "Service";
+  icon:
+    | "Home"
+    | "About"
+    | "Review"
+    | "Service"
+    | "History"
+    | "Culture"
+    | "Team"
+    | "App Developer"
+    | "Audio Spesialist"
+    | "Music Curator"
+    | "Pricing";
   isActive: boolean;
 }
 
@@ -26,6 +44,13 @@ export const iconPageMap = {
   About: Building,
   Review: NotePencil,
   Service: Package,
+  History: Clock,
+  Culture: UserSound,
+  Team: UsersThree,
+  "App Developer": ComputerTower,
+  "Audio Spesialist": Headphones,
+  "Music Curator": PianoKeys,
+  Pricing: CreditCard,
 };
 
 export const iconSocialMap = {

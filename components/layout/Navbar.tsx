@@ -20,9 +20,13 @@ const link = siteConfig.navItems.map(({ href, label }) => (
         scale: 1.1,
       }}
       transition={{ duration: 0.25 }}
-      className="px-4 pt-2 pb-3 rounded-xl hover:bg-lavender hover:text-white"
     >
-      <Link href={href}>{label}</Link>
+      <Link
+        href={href}
+        className="px-4 pt-2 pb-3 rounded-xl hover:bg-lavender hover:text-white"
+      >
+        {label}
+      </Link>
     </motion.div>
   </NavbarItem>
 ));
@@ -43,9 +47,12 @@ const Nav = () => {
               scale: 1.1,
             }}
             transition={{ duration: 0.25 }}
-            className="px-4 pt-2 pb-3 rounded-xl bg-dark-lavender hover:bg-lavender text-white"
           >
-            <Link href="#" onClick={() => openContact()}>
+            <Link
+              className="px-4 pt-2 pb-3 rounded-xl bg-secondary-400 hover:bg-lavender text-white"
+              href="#"
+              onClick={() => openContact()}
+            >
               Contact Us
             </Link>
           </motion.div>

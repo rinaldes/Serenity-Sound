@@ -1,20 +1,23 @@
-import { PageIcon } from "@/assets/Icons";
+"use client";
 import { siteConfig } from "@/config/site";
-import Link from "next/link";
+import { PageAside, SocialAside } from "./LinkIcon";
+import { usePathname } from "next/navigation";
 
-const link = siteConfig.homeLinks.map(({ href, icon }) => (
-  <Link key={icon} href={href}>
-    <PageIcon
-      name={icon as "Home" | "About" | "Service" | "Review"}
-      isActive={false}
-    />
-  </Link>
-));
-
-const Aside = () => (
-  <aside className="flex flex-col items-center justify-end pb-20 h-full gap-12 text-gray-600 ">
-    {link}
-  </aside>
-);
+const Aside = ({ type }: { type: "page" | "social" }) => {
+  const pathName = usePathname();
+  const currentPath =
+    pathName === "/about"
+      ? siteConfig.aboutLinks
+      : pathName === "/teams"
+      ? siteConfig.teamsLinks
+      : pathName === "/services"
+      ? siteConfig.servicesLinks
+      : siteConfig.homeLinks;
+  return (
+    <aside className="flex flex-col items-center justify-end pb-16 h-full gap-8 text-gray-600 ">
+      {type === "page" ? <PageAside path={currentPath} /> : <SocialAside />}
+    </aside>
+  );
+};
 
 export default Aside;

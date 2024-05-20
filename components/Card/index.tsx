@@ -28,10 +28,10 @@ const CardComponent = ({
   }[type];
 
   const cardSize = {
-    cover: "md:col-span-6 h-[35.25rem]",
-    width: "md:col-span-4 h-[16.15rem]",
-    rectangle: "md:col-span-3 h-[16.15rem]",
-    square: "md:col-span-2 h-[16.15rem]",
+    cover: "md:col-span-6 h-[35rem]",
+    width: "md:col-span-4 h-[16rem]",
+    rectangle: "md:col-span-3 h-[16rem]",
+    square: "md:col-span-2 h-[16rem]",
   }[size];
   return (
     <Card

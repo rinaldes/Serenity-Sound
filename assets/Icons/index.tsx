@@ -8,14 +8,15 @@ import {
   iconSocialMap,
 } from "./interface";
 
-export const PageIcon = ({ name, isActive }: pageProps) => {
+export const PageIcon = ({ icon, isActive }: pageProps) => {
   const weight = isActive ? "fill" : "regular";
-  const IconComponent = iconPageMap[name];
+  const IconComponent = iconPageMap[icon];
   return (
     <motion.div whileHover={{ scale: 1.6 }}>
       <IconComponent
         weight={weight}
-        alt={`${name} icon for ${name} of Serenity Sound Website`}
+        alt={`${icon} icon for ${icon} of Serenity Sound Website`}
+        className="w-fit h-fit p-2 rounded-xl hover:bg-lavender hover:text-white"
       />
     </motion.div>
   );
@@ -29,7 +30,10 @@ export const SocialIcon = ({ name }: socialProps) => {
   const IconComponent = iconSocialMap[name];
   return (
     <motion.div whileHover={{ scale: 1.6 }}>
-      <IconComponent alt={alt} />
+      <IconComponent
+        alt={alt}
+        className="w-fit h-fit p-2 rounded-xl hover:bg-lavender hover:text-white"
+      />
     </motion.div>
   );
 };
