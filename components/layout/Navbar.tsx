@@ -59,9 +59,15 @@ const Nav = () => {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent className="flex lg:hidden" justify="end">
-        <Link href="#" onClick={() => openDrawer()}>
-          <List size={24} />
-        </Link>
+        <NavbarItem>
+          <Link
+            href="#"
+            onClick={() => openDrawer()}
+            aria-label="Open Menu Navigation"
+          >
+            <List size={24} />
+          </Link>
+        </NavbarItem>
       </NavbarContent>
     </Navbar>
   );
