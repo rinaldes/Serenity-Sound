@@ -7,15 +7,19 @@
 }
 
 .auto-scroll-fastest {
-  animation: scrollLong 4.5s linear infinite;
+  animation: scrollLong 4.5s linear infinite alternate-reverse;
 }
 
 .auto-scroll-faster {
-  animation: scrollLong 6s linear infinite;
+  animation: scrollLong 6s linear infinite alternate-reverse;
 }
 
 .auto-scroll-fast {
-  animation: scrollLong 7s linear infinite;
+  animation: scrollLong 7s linear infinite alternate;
+}
+
+.auto-scroll-fasting {
+  animation: scrollLong 5.75s linear infinite alternate;
 }
 
 @keyframes scroll {

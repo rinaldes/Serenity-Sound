@@ -1,11 +1,10 @@
 import { Button, Card } from "@/components";
 import { Subscribe } from "@/assets/Images";
 import { Heading, Text } from "@/components/typography";
+import Plan from "./Plan";
+
 const Pricing = () => (
-  <section
-    id="pricing"
-    className="gap-5 grid md:grid-cols-6 md:grid-rows-2 pt-8"
-  >
+  <section id="pricing" className="gap-5 grid md:grid-cols-6 pt-8">
     <Card image={Subscribe} alt="Cover Image" size="square" type="image" />
     <Card
       alt="Cover Image"
@@ -38,40 +37,9 @@ const Pricing = () => (
         </div>
       }
     />
-    <Card
-      alt="Cover Image"
-      size="rectangle"
-      type="text"
-      content={
-        <div className="text-center md:text-left flex flex-col items-center md:items-start">
-          <Heading type="h2" text="Serenity Breathe" />
-          <br />
-          <Text
-            type="p"
-            text="Take a deep breath and find moments of calm with our complimentary tier."
-          />
-          <br />
-          <Button text="Get Started" url="#" />
-        </div>
-      }
-    />
-    <Card
-      alt="Cover Image"
-      size="rectangle"
-      type="text"
-      content={
-        <div className="text-center md:text-left flex flex-col items-center md:items-start">
-          <Heading type="h2" text="Serenity Unwind" />
-          <br />
-          <Text
-            type="p"
-            text="Upgrade to Serenity Unwind and unlock a world of personalized peace."
-          />
-          <br />
-          <Button text="Get Started" url="#" />
-        </div>
-      }
-    />
+    <div className="col-span-6">
+      <Plan />
+    </div>
   </section>
 );
 
