@@ -1,4 +1,4 @@
-const cdn = process.env.NEXT_PUBLIC_CDN_API + "/q_30";
+const cdn = process.env.NEXT_PUBLIC_CDN_API + "/q_35";
 const cdnEnhance = cdn + "/f_auto/e_enhance";
 const cdnCover = cdnEnhance + "/e_gen_restore";
 const cdnCard = cdnEnhance + "/w_750";
@@ -28,14 +28,14 @@ export const CoverImage = {
 
 export const Library1 = {
   src: rawLibrary1,
-  width: 1024,
-  height: 1024,
+  width: 750,
+  height: 750,
 };
 
 export const Library2 = {
   src: rawLibrary2,
-  width: 1024,
-  height: 1024,
+  width: 750,
+  height: 750,
 };
 
 export const Image1 = {
@@ -46,26 +46,26 @@ export const Image1 = {
 
 export const TheApp = {
   src: rawTheApp,
-  width: 1024,
+  width: 750,
   height: 1063,
 };
 
 export const AppDev = {
   src: rawAppDev,
-  width: 1024,
-  height: 1024,
+  width: 750,
+  height: 750,
 };
 
 export const AudioSpes = {
   src: rawAudioSpes,
-  width: 1024,
-  height: 1024,
+  width: 750,
+  height: 750,
 };
 
 export const MusicCur = {
   src: rawMusicCur,
-  width: 1024,
-  height: 1024,
+  width: 750,
+  height: 750,
 };
 
 export const TheTeam = {

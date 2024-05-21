@@ -41,7 +41,7 @@ export const tiers: PricingTier[] = [
     ],
     featured: false,
     highlighted: false,
-    soldOut: false,
+    soldOut: true,
     cta: `Sign up`,
   },
   {
@@ -61,7 +61,7 @@ export const tiers: PricingTier[] = [
     ],
     featured: false,
     highlighted: true,
-    soldOut: false,
+    soldOut: true,
     cta: `Get started`,
   },
 ];
@@ -139,7 +139,7 @@ export default function Plan() {
                       tier.featured ? "!bg-gray-100 dark:!bg-black" : ""
                     )}
                   >
-                    {tier.soldOut ? "Sold out" : tier.cta}
+                    {tier.soldOut ? "Coming Soon" : tier.cta}
                   </button>
                 </a>
 
