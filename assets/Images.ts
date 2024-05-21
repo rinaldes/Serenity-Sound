@@ -23,13 +23,8 @@ TODO : Change the size of the image
 
 export const CoverImage = {
   src: rawCoverImage,
+  srcAlt: rawCoverMobile,
   width: 1344,
-  height: 768,
-};
-
-export const CoverMobile = {
-  src: rawCoverMobile,
-  width: 380,
   height: 768,
 };
 
