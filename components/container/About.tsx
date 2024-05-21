@@ -9,7 +9,6 @@ const About = () => (
     className="gap-5 grid md:grid-cols-6 md:grid-rows-2 pt-8"
   >
     <Card
-      alt="Cover Image"
       size="width"
       type="text"
       className="hidden md:block"
@@ -24,8 +23,6 @@ const About = () => (
       className="hidden md:block"
     />
     <Card
-      image={Library1}
-      alt="Cover Image"
       size="width"
       type="text"
       content={

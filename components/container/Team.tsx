@@ -14,8 +14,6 @@ const Team = () => {
     >
       <Card image={TheTeam} alt="Cover Image" size="square" type="image" />
       <Card
-        image={TheTeam}
-        alt="Cover Image"
         size="width"
         type="text"
         content={

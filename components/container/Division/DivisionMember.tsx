@@ -87,7 +87,6 @@ const DivisionMember = ({ division, image, desc }: DivisionMemberProps) => {
     >
       <Card image={image} alt="Cover Image" size="square" type="image" />
       <Card
-        alt="Cover Image"
         size="width"
         type="text"
         content={

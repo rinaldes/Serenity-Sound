@@ -7,7 +7,6 @@ const Pricing = () => (
   <section id="pricing" className="gap-5 grid md:grid-cols-6 pt-8">
     <Card image={Subscribe} alt="Cover Image" size="square" type="image" />
     <Card
-      alt="Cover Image"
       size="width"
       type="text"
       content={

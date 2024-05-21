@@ -60,7 +60,6 @@ const Review = () => {
       className="gap-x-6 grid md:grid-cols-6 grid-rows-2 pt-8 "
     >
       <Card
-        alt="Cover Image"
         size="width"
         type="text"
         className="hidden md:block text-center"

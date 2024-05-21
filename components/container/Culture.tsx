@@ -8,8 +8,6 @@ const Culture = () => (
     className="gap-5 grid md:grid-cols-6 md:grid-rows-2 pt-8"
   >
     <Card
-      image={Library1}
-      alt="Cover Image"
       size="width"
       type="text"
       content={
@@ -30,7 +28,6 @@ const Culture = () => (
       }
     />
     <Card
-      alt="Cover Image"
       size="square"
       type="text"
       content={
@@ -51,7 +48,6 @@ const Culture = () => (
       }
     />
     <Card
-      alt="Cover Image"
       size="square"
       type="text"
       content={
@@ -72,7 +68,6 @@ const Culture = () => (
       }
     />
     <Card
-      alt="Cover Image"
       size="square"
       type="text"
       content={
@@ -93,7 +88,6 @@ const Culture = () => (
       }
     />
     <Card
-      alt="Cover Image"
       size="square"
       type="text"
       content={

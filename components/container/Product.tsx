@@ -8,8 +8,6 @@ const Product = () => (
   >
     <Card image={Library2} alt="Cover Image" size="square" type="image" />
     <Card
-      image={Library2}
-      alt="Cover Image"
       size="width"
       type="text"
       content={
@@ -29,7 +27,6 @@ const Product = () => (
       }
     />
     <Card
-      alt="Cover Image"
       size="square"
       type="text"
       content={
@@ -61,7 +58,6 @@ const Product = () => (
     />
     <Card image={TheApp} alt="Cover Image" size="square" type="image" />
     <Card
-      alt="Cover Image"
       size="square"
       type="text"
       content={
