@@ -9,23 +9,25 @@ const About = () => (
     className="gap-5 grid md:grid-cols-6 md:grid-rows-2 pt-8"
   >
     <Card
-      alt="Cover Image"
       size="width"
       type="text"
       className="hidden md:block"
       content={<Logo type="large" variant="width" />}
     />
-    <Card image={Image1} alt="Cover Image" size="square" type="image" />
+    <Card
+      image={Image1}
+      alt="A girl wearing headphone"
+      size="square"
+      type="image"
+    />
     <Card
       image={MusicShare}
-      alt="Cover Image"
+      alt="Some user share their favorite music at Serenity App"
       size="square"
       type="image"
       className="hidden md:block"
     />
     <Card
-      image={Library1}
-      alt="Cover Image"
       size="width"
       type="text"
       content={

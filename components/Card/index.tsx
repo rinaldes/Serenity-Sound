@@ -4,7 +4,7 @@ import { CombinationCard, CoverCard, TextCard, ImageCard } from "./Type";
 interface CardProps {
   type: "cover" | "text" | "combination" | "image";
   size: "square" | "cover" | "width" | "rectangle";
-  alt: string;
+  alt?: string;
   image?: StaticImageData;
   content?: JSX.Element;
   variant?: string;
@@ -14,7 +14,7 @@ interface CardProps {
 const CardComponent = ({
   size,
   image,
-  alt,
+  alt = "",
   type,
   content,
   variant = "1",

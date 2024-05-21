@@ -7,7 +7,6 @@ const History = () => (
     className="gap-5 grid md:grid-cols-6 md:grid-rows-2 pt-8"
   >
     <Card
-      alt="Cover Image"
       size="width"
       type="text"
       content={
@@ -27,9 +26,13 @@ const History = () => (
         </div>
       }
     />
-    <Card image={Walking} alt="Cover Image" size="square" type="image" />
     <Card
-      alt="Cover Image"
+      image={Walking}
+      alt="A girl listening music on the way"
+      size="square"
+      type="image"
+    />
+    <Card
       size="rectangle"
       type="text"
       content={
@@ -48,8 +51,6 @@ const History = () => (
       }
     />
     <Card
-      image={Library1}
-      alt="Cover Image"
       size="rectangle"
       type="text"
       content={

@@ -6,10 +6,13 @@ const Product = () => (
     id="product"
     className="gap-5 grid md:grid-cols-6 md:grid-rows-2 pt-8"
   >
-    <Card image={Library2} alt="Cover Image" size="square" type="image" />
     <Card
       image={Library2}
-      alt="Cover Image"
+      alt="A student listening music while studying"
+      size="square"
+      type="image"
+    />
+    <Card
       size="width"
       type="text"
       content={
@@ -29,7 +32,6 @@ const Product = () => (
       }
     />
     <Card
-      alt="Cover Image"
       size="square"
       type="text"
       content={
@@ -59,9 +61,8 @@ const Product = () => (
         </div>
       }
     />
-    <Card image={TheApp} alt="Cover Image" size="square" type="image" />
+    <Card image={TheApp} alt="Serenity App" size="square" type="image" />
     <Card
-      alt="Cover Image"
       size="square"
       type="text"
       content={

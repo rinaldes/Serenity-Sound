@@ -9,7 +9,6 @@ const ReviewCard = (userReview: any) =>
     <motion.div key={index} whileHover={{ scale: 1.05 }}>
       <Card
         key={index}
-        alt="Cover Image"
         size="rectangle"
         type="text"
         content={
