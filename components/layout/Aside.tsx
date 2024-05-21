@@ -14,7 +14,7 @@ const Aside = ({ type }: { type: "page" | "social" }) => {
       ? siteConfig.servicesLinks
       : siteConfig.homeLinks;
   return (
-    <aside className="flex flex-col items-center justify-end pb-16 h-full gap-8 text-gray-600 ">
+    <aside className="hidden lg:flex lg:w-1/12 lg:flex-col items-center justify-end pb-16 h-full gap-8 text-gray-600 ">
       {type === "page" ? <PageAside path={currentPath} /> : <SocialAside />}
     </aside>
   );

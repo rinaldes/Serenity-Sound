@@ -17,10 +17,6 @@ const rawSubscribe = `${cdnEnhance}/f_auto/Serenity/motytlv8ar0gofxme99p.jpg`;
 const rawSerenityLogo = `${cdn}/f_webp/e_improve:outdoor/Serenity/zuehemfwgnjitliavvpf.jpg`;
 const rawSerenityLogoBig = `${cdn}/f_webp/e_improve:outdoor/Serenity/qdx0tz6myaesmso1howm.jpg`;
 
-/* 
-TODO : Change the size of the image
-*/
-
 export const CoverImage = {
   src: rawCoverImage,
   srcAlt: rawCoverMobile,

@@ -35,12 +35,10 @@ const Team = () => {
             />
             <br />
             <Text
-              type="p"
               text="At Serenity, we're a passionate group of music enthusiasts and wellness advocates driven by a shared mission: to curate music that fosters peace and tranquility. Our team consists of:"
               className="hidden md:block"
             />
             <Text
-              type="p"
               text="A passionate group of music enthusiasts and wellness advocates driven by a shared mission: to curate music that fosters peace and tranquility."
               className="block md:hidden"
             />
@@ -58,12 +56,10 @@ const Team = () => {
             <Heading type="h3" text="Music Curators" />
             <br />
             <Text
-              type="p"
               text="A team with a discerning ear and a deep understanding of music's impact on mood. Meticulously craft playlists that cater to a variety of needs."
               className="block lg:hidden"
             />
             <Text
-              type="p"
               text="A dedicated team with a discerning ear for calming melodies and a deep understanding of music's impact on mood. They meticulously craft playlists that cater to a variety of moods and needs."
               className="hidden lg:block"
             />
@@ -81,12 +77,10 @@ const Team = () => {
             <Heading type="h3" text="Audio Specialists" />
             <br />
             <Text
-              type="p"
               text="Experts who ensure the music delivered in the highest quality, creating an immersive, restorative experience for optimal sound clarity."
               className="block lg:hidden"
             />
             <Text
-              type="p"
               text="Experts who ensure the music on Serenity is delivered in the highest quality, creating an immersive and restorative listening experience. They fine-tune the audio for optimal sound clarity and user enjoyment."
               className="hidden lg:block"
             />
@@ -104,12 +98,10 @@ const Team = () => {
             <Heading type="h3" text="App Developers" />
             <br />
             <Text
-              type="p"
               text="Who craft a user-friendly and intuitive app that seamlessly integrates into your life. Prioritize enhance your journey towards serenity."
               className="block lg:hidden"
             />
             <Text
-              type="p"
               text="Talented individuals who craft a user-friendly and intuitive app that seamlessly integrates into your life. They prioritize a smooth user experience to enhance your journey towards serenity."
               className="hidden lg:block"
             />

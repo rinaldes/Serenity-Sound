@@ -2,10 +2,7 @@ import { Text } from "@/components/typography";
 
 const Footer = () => (
   <footer className="w-full flex flex-row justify-between my-2 text-gray-600">
-    <Text
-      type="p"
-      text="Copyright © 2024 Serenity Company. All rights reserved."
-    />
+    <Text text="Copyright © 2024 Serenity Company. All rights reserved." />
   </footer>
 );
 

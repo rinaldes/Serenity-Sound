@@ -6,41 +6,33 @@ interface HeadingProps {
   className?: string;
 }
 
+const headSize = (type: HeadingProps["type"]) => {
+  return type === "h1"
+    ? "text-2xl sm:text-3xl md:text-5xl lg:text-6xl"
+    : type === "h2"
+    ? "text-xl lg:text-2xl"
+    : type === "h3"
+    ? "text-xl"
+    : "text-lg";
+};
+
 const Heading = ({ type, text, className }: HeadingProps) => {
-  switch (type) {
-    case "h1":
-      return (
-        <h1
-          className={`${titleFont.variable} font-bold font-title text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-black ${className}`}
-        >
-          {text}
-        </h1>
-      );
-    case "h2":
-      return (
-        <h2
-          className={`${titleFont.variable} font-bold font-title text-xl lg:text-2xl ${className}`}
-        >
-          {text}
-        </h2>
-      );
-    case "h3":
-      return (
-        <h3
-          className={`${titleFont.variable} font-semibold font-title text-xl ${className}`}
-        >
-          {text}
-        </h3>
-      );
-    case "h4":
-      return (
-        <h3
-          className={`${titleFont.variable} font-semibold font-title text-lg ${className}`}
-        >
-          {text}
-        </h3>
-      );
-  }
+  const headMap: Record<HeadingProps["type"], keyof JSX.IntrinsicElements> = {
+    h1: "h1",
+    h2: "h2",
+    h3: "h3",
+    h4: "h4",
+  };
+  const HeadType = headMap[type];
+  return (
+    <HeadType
+      className={`${
+        titleFont.variable
+      } font-title font-bold text-black ${headSize(type)} ${className} `}
+    >
+      {text}
+    </HeadType>
+  );
 };
 
 export default Heading;

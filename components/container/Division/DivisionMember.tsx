@@ -46,15 +46,10 @@ const TeamCard = (teamMember: any, image: StaticImageData) => {
                   <Image alt={member.name} src={member.picture} size="smol" />
                   <div>
                     <Heading type="h4" text={member.name} />
-                    <Text
-                      type="p"
-                      className="text-md font-bold"
-                      text={member.title}
-                    />
+                    <Text className="text-md font-bold" text={member.title} />
                   </div>
                 </div>
                 <Text
-                  type="p"
                   className="text-md text-center mx-2 md:hidden lg:block"
                   text={member.quote}
                 />
@@ -98,7 +93,7 @@ const DivisionMember = ({ division, image, desc }: DivisionMemberProps) => {
           <div>
             <Heading type="h3" text={division} />
             <br />
-            <Text type="p" text={desc} />
+            <Text text={desc} />
           </div>
         }
       />

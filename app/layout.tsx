@@ -17,24 +17,18 @@ export const metadata: Metadata = {
   },
 };
 
-/*
-  TODO: You must be kidding, lol! Don't forget to Simplyfied this!
-*/
-
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en" suppressHydrationWarning>
     <body
       className={`${bodyFont.variable} font-body bg-white-lavender flex h-screen w-screen`}
     >
-      <div className="hidden lg:block lg:w-1/12">
-        <Aside type="page" />
-      </div>
+      <Aside type="page" />
       <div className="w-full lg:w-5/6 overflow-hidden">
         <ModalProvider>
           <Navbar />
           <ScrollShadow
             className={`overflow-y-auto h-[88vh]`}
-            style={{ scrollbarWidth: "none" }}
+            hideScrollBar
             size={20}
           >
             <div className="flex flex-col overflow-x-hidden">
@@ -44,9 +38,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
           </ScrollShadow>
         </ModalProvider>
       </div>
-      <div className="hidden lg:block lg:w-1/12">
-        <Aside type="social" />
-      </div>
+      <Aside type="social" />
     </body>
   </html>
 );

@@ -6,39 +6,22 @@ interface ImageProps {
   alt: string;
   className?: string;
   size?: "large" | "small" | "smol";
-  isZoomable?: boolean;
-  priority?: boolean;
 }
-const ImageComponent = ({
-  src,
-  alt,
-  className,
-  size,
-  isZoomable = true,
-  priority = false,
-}: ImageProps) => (
+
+const sizeChecker = (num: number, size: ImageProps["size"]) => {
+  return size === "large" ? num / 4 : size === "smol" ? num / 1.5 : num;
+};
+
+const ImageComponent = ({ src, alt, className, size }: ImageProps) => (
   <Image
     as={NextImage}
-    width={
-      size === "large"
-        ? src.width / 4
-        : size === "smol"
-        ? src.width / 1.5
-        : src.width
-    }
-    height={
-      size === "large"
-        ? src.height / 4
-        : size === "smol"
-        ? src.height / 1.5
-        : src.height
-    }
+    width={sizeChecker(src.width, size)}
+    height={sizeChecker(src.height, size)}
     alt={alt}
     src={src.src}
     className={className}
     removeWrapper
-    priority={priority}
-    isZoomed={isZoomable}
+    isZoomed
     fallbackSrc={`https://via.placeholder.com/${src.width}x${src.height}`}
   />
 );
