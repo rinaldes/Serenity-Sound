@@ -28,14 +28,10 @@ const Pricing = () => (
           />
           <br />
           <Text
-            type="p"
             text="Choose a plan that best fits your needs."
             className="hidden md:block"
           />
-          <Text
-            type="p"
-            text="Don't worry, you can change your plan at any time."
-          />
+          <Text text="Don't worry, you can change your plan at any time." />
           <br />
           <Button text="Compare Plans" url="#" />
         </div>

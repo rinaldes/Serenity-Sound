@@ -86,9 +86,7 @@ const cn = (...args: Array<string | boolean | undefined | null>) =>
 
 export default function Plan() {
   return (
-    <div
-      className={cn("flex flex-col w-full items-center", styles.fancyOverlay)}
-    >
+    <div className={cn("flex flex-col w-full items-center")}>
       <div className="w-full flex flex-col items-center">
         <div className="flex flex-col items-center">
           <div className="isolate mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 lg:mx-0 select-none">
