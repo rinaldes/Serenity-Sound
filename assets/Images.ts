@@ -1,7 +1,7 @@
-const cdn = process.env.NEXT_PUBLIC_CDN_API + "/q_35";
+const cdn = process.env.NEXT_PUBLIC_CDN_API + "/q_30";
 const cdnEnhance = cdn + "/f_auto/e_enhance";
 const cdnCover = cdnEnhance + "/e_gen_restore";
-const cdnCard = cdnEnhance + "/w_750";
+const cdnCard = cdnEnhance + "/w_700";
 
 const rawCoverImage = `${cdnCover}/w_1000/Serenity/ankrqsdcl9dlyiwo4wed.jpg`;
 const rawCoverMobile = `${cdnCover}/ar_1:2,c_auto,g_auto,h_1.00/Serenity/ankrqsdcl9dlyiwo4wed.jpg`;
