@@ -3,12 +3,17 @@ import { CoverImage, CoverMobile } from "@/assets/Images";
 
 const Hero = () => (
   <section id="home">
-    <article className="hidden md:block">
-      <Card image={CoverImage} alt="Cover Image" size="cover" type="cover" />
-    </article>
-    <article className="block md:hidden">
-      <Card image={CoverMobile} alt="Cover Image" size="cover" type="cover" />
-    </article>
+    <Card
+      image={
+        typeof window !== "undefined" &&
+        window.matchMedia("(min-width: 768px)").matches
+          ? CoverImage
+          : CoverMobile
+      }
+      alt="Cover Image"
+      size="cover"
+      type="cover"
+    />
   </section>
 );
 
