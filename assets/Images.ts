@@ -1,7 +1,7 @@
-const cdn = process.env.NEXT_PUBLIC_CDN_API + "/q_35";
+const cdn = process.env.NEXT_PUBLIC_CDN_API + "/q_30";
 const cdnEnhance = cdn + "/f_auto/e_enhance";
 const cdnCover = cdnEnhance + "/e_gen_restore";
-const cdnCard = cdnEnhance + "/w_800";
+const cdnCard = cdnEnhance + "/w_750";
 
 const rawCoverImage = `${cdnCover}/w_1000/Serenity/ankrqsdcl9dlyiwo4wed.jpg`;
 const rawCoverMobile = `${cdnCover}/ar_1:2,c_auto,g_auto,h_1.00/Serenity/ankrqsdcl9dlyiwo4wed.jpg`;
@@ -9,9 +9,9 @@ const rawLibrary1 = `${cdnCard}/Serenity/pcb3ivpv7fz49ve0ekfy.jpg`;
 const rawLibrary2 = `${cdnCard}/Serenity/uxrvxhq6sa97mglgl7kh.jpg`;
 const rawImage1 = `${cdnCard}/Serenity/gjp9zfphuopcgweu9gxs.jpg`;
 const rawTheApp = `${cdn}/w_500/f_auto/Serenity/jqbnquroruwrx8076pzu.jpg`;
-const rawAppDev = `${cdn}/w_800/f_auto/Serenity/itdsuw5vplnsarevr08y.jpg`;
-const rawAudioSpes = `${cdn}/w_800/f_auto/Serenity/xjdbrtcrrjmhcdujniiu.jpg`;
-const rawMusicCur = `${cdn}/w_800/f_auto/Serenity/qldpsru6seorrqfawczq.jpg`;
+const rawAppDev = `${cdn}/w_700/f_auto/Serenity/itdsuw5vplnsarevr08y.jpg`;
+const rawAudioSpes = `${cdn}/w_700/f_auto/Serenity/xjdbrtcrrjmhcdujniiu.jpg`;
+const rawMusicCur = `${cdn}/w_700/f_auto/Serenity/qldpsru6seorrqfawczq.jpg`;
 const rawTheTeam = `${cdnCard}/Serenity/p0tof3wa77wxeq4adjyd.jpg`;
 const rawMusicShare = `${cdnCard}/Serenity/q6fnewnmfqvoq6pzkp7z.jpg`;
 const rawWalking = `${cdnCard}/Serenity/rlkd9ldfuhwg3s1naw9k.jpg`;
