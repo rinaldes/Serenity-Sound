@@ -13,7 +13,7 @@ const ReviewCard = (userReview: any) =>
         type="text"
         content={
           <article className="px-8">
-            <Text variant="italic" text={`‟ ${result.review} ”`} />
+            <Text text={`‟ ${result.review} ”`} />
             <br />
             <div className="grid gap-2 md:gap-0 grid-cols-[1fr_3fr] md:grid-cols-[1fr_4fr]">
               <Avatar isBordered radius="full" src={result.picture} size="lg" />
