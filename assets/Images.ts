@@ -1,19 +1,21 @@
-const cdn = process.env.NEXT_PUBLIC_CDN_API;
-const cdnEnhance = cdn + "/e_enhance";
+const cdn = process.env.NEXT_PUBLIC_CDN_API + "/q_35";
+const cdnEnhance = cdn + "/f_auto/e_enhance";
+const cdnCover = cdnEnhance + "/e_gen_restore";
+const cdnCard = cdnEnhance + "/w_800";
 
-const rawCoverImage = `${cdnEnhance}/e_gen_restore/f_auto/Serenity/ankrqsdcl9dlyiwo4wed.jpg`;
-const rawCoverMobile = `${cdnEnhance}/e_gen_restore/ar_1:2,c_auto,g_auto,h_1.00/f_auto/Serenity/ankrqsdcl9dlyiwo4wed.jpg`;
-const rawLibrary1 = `${cdnEnhance}/f_auto/Serenity/pcb3ivpv7fz49ve0ekfy.jpg`;
-const rawLibrary2 = `${cdnEnhance}/f_auto/Serenity/uxrvxhq6sa97mglgl7kh.jpg`;
-const rawImage1 = `${cdnEnhance}/f_auto/Serenity/gjp9zfphuopcgweu9gxs.jpg`;
-const rawTheApp = `${cdn}/f_auto/Serenity/jqbnquroruwrx8076pzu.jpg`;
-const rawAppDev = `${cdn}/f_auto/Serenity/itdsuw5vplnsarevr08y.jpg`;
-const rawAudioSpes = `${cdn}/f_auto/Serenity/xjdbrtcrrjmhcdujniiu.jpg`;
-const rawMusicCur = `${cdn}/f_auto/Serenity/qldpsru6seorrqfawczq.jpg`;
-const rawTheTeam = `${cdnEnhance}/f_auto/Serenity/p0tof3wa77wxeq4adjyd.jpg`;
-const rawMusicShare = `${cdnEnhance}/f_auto/Serenity/q6fnewnmfqvoq6pzkp7z.jpg`;
-const rawWalking = `${cdnEnhance}/f_auto/Serenity/rlkd9ldfuhwg3s1naw9k.jpg`;
-const rawSubscribe = `${cdnEnhance}/f_auto/Serenity/motytlv8ar0gofxme99p.jpg`;
+const rawCoverImage = `${cdnCover}/w_1000/Serenity/ankrqsdcl9dlyiwo4wed.jpg`;
+const rawCoverMobile = `${cdnCover}/ar_1:2,c_auto,g_auto,h_1.00/Serenity/ankrqsdcl9dlyiwo4wed.jpg`;
+const rawLibrary1 = `${cdnCard}/Serenity/pcb3ivpv7fz49ve0ekfy.jpg`;
+const rawLibrary2 = `${cdnCard}/Serenity/uxrvxhq6sa97mglgl7kh.jpg`;
+const rawImage1 = `${cdnCard}/Serenity/gjp9zfphuopcgweu9gxs.jpg`;
+const rawTheApp = `${cdn}/w_500/f_auto/Serenity/jqbnquroruwrx8076pzu.jpg`;
+const rawAppDev = `${cdn}/w_800/f_auto/Serenity/itdsuw5vplnsarevr08y.jpg`;
+const rawAudioSpes = `${cdn}/w_800/f_auto/Serenity/xjdbrtcrrjmhcdujniiu.jpg`;
+const rawMusicCur = `${cdn}/w_800/f_auto/Serenity/qldpsru6seorrqfawczq.jpg`;
+const rawTheTeam = `${cdnCard}/Serenity/p0tof3wa77wxeq4adjyd.jpg`;
+const rawMusicShare = `${cdnCard}/Serenity/q6fnewnmfqvoq6pzkp7z.jpg`;
+const rawWalking = `${cdnCard}/Serenity/rlkd9ldfuhwg3s1naw9k.jpg`;
+const rawSubscribe = `${cdnCard}/Serenity/motytlv8ar0gofxme99p.jpg`;
 const rawSerenityLogo = `${cdn}/f_webp/e_improve:outdoor/Serenity/zuehemfwgnjitliavvpf.jpg`;
 const rawSerenityLogoBig = `${cdn}/f_webp/e_improve:outdoor/Serenity/qdx0tz6myaesmso1howm.jpg`;
 
