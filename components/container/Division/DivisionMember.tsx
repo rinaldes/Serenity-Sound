@@ -35,7 +35,7 @@ const TeamCard = (teamMember: any, image: StaticImageData) => {
         ) => (
           <Card
             key={index}
-            alt="Cover Image"
+            alt="The team behind Serenity"
             size="square"
             type="combination"
             image={image}
@@ -43,7 +43,7 @@ const TeamCard = (teamMember: any, image: StaticImageData) => {
             content={
               <div className="flex flex-col h-full justify-start py-4 gap-6">
                 <div className="flex flex-row md:flex-col lg:flex-row gap-4 items-center md:text-center lg:text-left">
-                  <Image alt="Cover Image" src={member.picture} size="smol" />
+                  <Image alt={member.name} src={member.picture} size="smol" />
                   <div>
                     <Heading type="h4" text={member.name} />
                     <Text
@@ -85,7 +85,12 @@ const DivisionMember = ({ division, image, desc }: DivisionMemberProps) => {
       }
       className="gap-5 grid md:grid-cols-6 md:grid-rows-2 pt-8"
     >
-      <Card image={image} alt="Cover Image" size="square" type="image" />
+      <Card
+        image={image}
+        alt={`${division} of Serenity Team`}
+        size="square"
+        type="image"
+      />
       <Card
         size="width"
         type="text"

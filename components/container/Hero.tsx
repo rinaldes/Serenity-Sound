@@ -10,7 +10,7 @@ const Hero = () => (
           ? CoverImage
           : CoverMobile
       }
-      alt="A girl listening music with Serenity"
+      alt="A girl listening music with Serenity anywhere"
       size="cover"
       type="cover"
     />

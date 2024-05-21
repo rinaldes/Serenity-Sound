@@ -12,7 +12,12 @@ const Team = () => {
       id="team"
       className="gap-5 grid md:grid-cols-6 md:grid-rows-2 pt-8"
     >
-      <Card image={TheTeam} alt="Cover Image" size="square" type="image" />
+      <Card
+        image={TheTeam}
+        alt="The team behind Serenity"
+        size="square"
+        type="image"
+      />
       <Card
         size="width"
         type="text"
@@ -44,7 +49,7 @@ const Team = () => {
       />
       <Card
         image={MusicCur}
-        alt="Cover Image"
+        alt="Music Curator at Serenity"
         size="square"
         type="combination"
         className={pathname === "/teams" ? "hidden md:block" : ""}
@@ -67,7 +72,7 @@ const Team = () => {
       />
       <Card
         image={AudioSpes}
-        alt="Cover Image"
+        alt="Audio Spesialist at Serenity"
         size="square"
         type="combination"
         className={pathname === "/teams" ? "hidden md:block" : ""}
@@ -90,7 +95,7 @@ const Team = () => {
       />
       <Card
         image={AppDev}
-        alt="Cover Image"
+        alt="App Developer who develop Serenity App"
         size="square"
         type="combination"
         className={pathname === "/teams" ? "hidden md:block" : ""}

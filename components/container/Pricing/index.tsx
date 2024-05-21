@@ -5,7 +5,12 @@ import Plan from "./Plan";
 
 const Pricing = () => (
   <section id="pricing" className="gap-5 grid md:grid-cols-6 pt-8">
-    <Card image={Subscribe} alt="Cover Image" size="square" type="image" />
+    <Card
+      image={Subscribe}
+      alt="Some Student subscribing to Serenity App"
+      size="square"
+      type="image"
+    />
     <Card
       size="width"
       type="text"

@@ -26,7 +26,12 @@ const History = () => (
         </div>
       }
     />
-    <Card image={Walking} alt="Cover Image" size="square" type="image" />
+    <Card
+      image={Walking}
+      alt="A girl listening music on the way"
+      size="square"
+      type="image"
+    />
     <Card
       size="rectangle"
       type="text"

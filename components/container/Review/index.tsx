@@ -74,7 +74,12 @@ const Review = () => {
           </div>
         }
       />
-      <Card image={Library1} alt="Cover Image" size="square" type="image" />
+      <Card
+        image={Library1}
+        alt="A girl use Serenity App at Library"
+        size="square"
+        type="image"
+      />
       <article className="w-[1200%] md:w-[600%] lg:w-[400%] md:col-span-6 overflow-hidden auto-scroll">
         <div className="w-full grid grid-cols-8 gap-8 py-4">{userReview}</div>
       </article>
