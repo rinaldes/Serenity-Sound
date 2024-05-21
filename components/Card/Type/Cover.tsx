@@ -26,7 +26,11 @@ const CoverCard = ({ cardSize, alt, image, className = "" }: CardProps) => (
           text="Serenity Sound"
           className="text-dark-lavender text-xl sm:text-4xl md:text-6xl"
         />
-        <Heading type="h3" text="Melt away your worries and soothe your soul" />
+        <Heading
+          type="h2"
+          text="Melt away your worries and soothe your soul"
+          className="text-xl sm:text-2xl md:text-3xl"
+        />
       </div>
     </CardHeader>
     <div className="absolute z-0 top-0 left-0 w-1/5 h-1/2 bg-white-lavender"></div>

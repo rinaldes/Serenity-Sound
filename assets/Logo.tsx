@@ -7,6 +7,16 @@ interface LogoProps {
   variant?: "normal" | "width";
 }
 
+const LogoText = ({ type, variant }: LogoProps) => (
+  <span
+    className={`${titleFont.variable} font-title font-semibold text-black ${
+      type === "large" ? "text-5xl" : "text-2xl"
+    } my-auto`}
+  >
+    Serenity {variant === "width" ? "Company" : ""}
+  </span>
+);
+
 const Logo = ({ type, variant }: LogoProps) => (
   <div className={`flex ${type === "large" ? "gap-5" : "gap-2"} `}>
     <Image
@@ -15,13 +25,7 @@ const Logo = ({ type, variant }: LogoProps) => (
       size={type}
       className="mix-blend-multiply"
     />
-    <span
-      className={`${titleFont.variable} font-title font-semibold text-black ${
-        type === "large" ? "text-5xl" : "text-2xl"
-      } my-auto`}
-    >
-      Serenity {variant === "width" ? "Company" : ""}
-    </span>
+    <LogoText type={type} variant={variant} />
   </div>
 );
 
