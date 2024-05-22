@@ -1,8 +1,8 @@
 .fancyOverlay,
 .fancyGlass {
-  --primary-light: theme("colors.pink.400");
-  --primary-main: theme("colors.pink.500");
-  --primary-darker: theme("colors.pink.900");
+  --primary-light: theme("colors.purple.400");
+  --primary-main: theme("colors.purple.500");
+  --primary-darker: theme("colors.purple.900");
   --secondary-light: theme("colors.zinc.400");
   --secondary-main: theme("colors.zinc.500");
   --secondary-darker: theme("colors.zinc.900");
