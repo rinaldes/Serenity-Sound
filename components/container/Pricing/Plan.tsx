@@ -135,7 +135,7 @@ export default function Plan() {
                       tier.featured || tier.soldOut ? "grayscale" : "",
                       !tier.highlighted && !tier.featured
                         ? "bg-gray-100 dark:bg-gray-600 border border-solid border-gray-300 dark:border-gray-800"
-                        : "bg-pink-300/70 text-pink-foreground hover:bg-pink-400/70 dark:bg-pink-700 dark:hover:bg-pink-800/90",
+                        : "bg-purple-300/70 text-purple-foreground hover:bg-purple-400/70 dark:bg-purple-700 dark:hover:bg-purple-800/90",
                       tier.featured ? "!bg-gray-100 dark:!bg-black" : ""
                     )}
                   >
@@ -148,7 +148,9 @@ export default function Plan() {
                     <li key={feature} className="flex gap-x-3">
                       <CheckIcon
                         className={cn(
-                          tier.highlighted ? "text-pink-500" : "text-gray-500",
+                          tier.highlighted
+                            ? "text-purple-500"
+                            : "text-gray-500",
                           "h-6 w-5 flex-none"
                         )}
                         aria-hidden="true"
